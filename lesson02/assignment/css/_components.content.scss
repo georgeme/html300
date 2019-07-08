@@ -8,10 +8,76 @@ html {
     box-sizing: inherit;
 }
 
-.main {
+.container {
     padding: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
-h1 {
-    color: $red;  
+figure {
+  display: inline-block;
+}
+
+figure img {
+  vertical-align: top;
+}
+
+figure figcaption {
+  text-align: center;
+}
+
+figure figcaption:first-of-type {
+  margin-top: 1rem;
+}
+
+figure figcaption:last-of-type {
+  margin-top: .5rem;
+}
+
+.intro-details {
+  padding: 2rem;
+  justify-content: center;
+}
+
+.details {
+  &__label {
+    display: inline-block;
+    color: $grayfont;
+    font-family: $font;
+    font-weight: 700;
+  }
+
+  &__value {
+    display: inline-block;
+    color: $grayfont;
+    font-family: $font;
+    font-weight: 400;
+  }
+
+  &__image {
+    border-radius: 50%;
+    width: 226px;
+    height: 226px;
+  }
+
+  &__linkedimg {
+    float: left;
+    padding-right: 0.5rem;
+  }
+
+  &__name {
+    color: $grayfont;
+    font-family: $font;
+    font-weight: 700;
+    font-size: 1.25em;
+  }
+
+  &__title {
+    color: $grayfont;
+    font-family: $font;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: italic;
+  }
+
 }
