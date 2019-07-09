@@ -6,6 +6,7 @@ html {
     padding: 2rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     width: 59.5rem;
     height: auto;
@@ -13,11 +14,21 @@ html {
     border-radius: .25rem;
     box-shadow: 0.25rem 0.25rem #bfbfbf;
     outline: 1px solid #e6e6e6;
+    margin-left: 2rem;
+    margin-top: 2rem;
 }
 
-@media screen and (min-width: 325px) and (max-width: 700px) {
+@media screen and (min-width: 300px) and (max-width: 1024px) {
   .container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: auto;
+    width: auto;
+    margin-left: 0;
+    margin-top: 0;
     border: none;
     box-shadow: none;
     outline: none;
@@ -31,6 +42,7 @@ figure {
 figure img {
   vertical-align: top;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 figure p {
@@ -41,19 +53,14 @@ figure p:first-of-type {
   margin-top: 1rem;
 }
 
-figure p:last-of-type {
-  margin-top: .5rem;
-}
-
 .intro {
   width: 25%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 1024px) {
   .intro {
-  margin-left: 1rem;
-  width: 100%;
-  height: 100%;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -67,10 +74,15 @@ figure p:last-of-type {
   margin-left: 5rem;
 }
 
-@media screen and (max-width: 768px) {
+.intro-details {
+  float: right;
+}
+
+@media screen and (min-width: 300px) and (max-width: 1024px) {
   .intro-details {
+    padding-left: 0.5rem;
     margin-left: 1rem;
-    width: 25%;
+    width: auto;
     height: auto;
   }
 }
@@ -94,14 +106,7 @@ figure p:last-of-type {
     border-radius: 50%;
     width: 14rem;
     height: 14rem;
-  }
-
-  @media screen and (max-width: 768px) {
-   &__image {
-     border-radius: 50%;
-     width: 14rem;
-     height: 14rem;
-    }
+    float: left;
   }
 
   &__linkedimg {
@@ -124,5 +129,4 @@ figure p:last-of-type {
     font-weight: 400;
     font-style: italic;
   }
-
 }
