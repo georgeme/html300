@@ -1,15 +1,59 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Fun with Constructors!</title>
-	<script src="index.js"></script>
-</head>
-<body>
-	<h1>Assignment 3</h1>
-	<section class="template-hook">
-		Fill this section with the templated components
-	</section>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Lesson 02 Assignment</title>
+    </head>
+    <body>
+<!-- Creating the container for the flex item -->
+        <main class="container">
+
+<!-- Separating the headshot image and name/title for the flex row -->
+          <section class="intro">
+            <figure class="details">
+              <img class="details__image" src="img/unsplash-headshot.jpg" alt="Picture of Steve Smith">
+              <p class="details__name">Steve Smith</p>
+              <p class="details__title">Project Manager</p>
+            </figure>
+          </section>
+
+<!-- Separating the details for the name/title for placement in the flex row -->
+<!-- Reusing the "details" class as well as the "label" and "value" for font family and font color -->
+          <section class="intro-details">
+            <article class="details">
+              <p class="details__label">Company: </p>
+              <p class="details__value">Front End Dev Co</p>
+            </article>
+
+            <article class="details">
+              <p class="details__label">Experience: </p>
+              <p class="details__value">3 years</p>
+            </article>
+
+            <article class="details">
+              <p class="details__label">School: </p>
+              <p class="details__value">UW</p>
+            </article>
+
+            <article class="details">
+              <p class="details__label">Major: </p>
+              <p class="details__value">Marketing</p>
+            </article>
+
+            <article class="details">
+              <p class="details__label">Email: </p>
+              <p class="details__value">steve@fedc.com</p>
+            </article>
+
+            <article class="details">
+              <img class="details__linkedimg" src="img/linkedin.svg" alt="LinkedIn site logo">
+<!-- Reused the "details" class to be able to use the "value" for the font styling -->
+              <p class="details__value">steve.linkedinprofile.com</p>
+            </article>
+          </section>
+        </main>
+    </body>
 </html>
