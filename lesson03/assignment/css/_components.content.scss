@@ -2,16 +2,158 @@ html {
     box-sizing: border-box;
 }
 
-*,
-*:after,
-*:before {
-    box-sizing: inherit;
+// Creating the flex container as a row, using reusable variables in case we were to add to this single employee card later
+.container {
+    // padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    height: auto;
+    border: 3rem solid $gray;
+    border-radius: .25rem;
+    box-shadow: 0.25rem 0.25rem $grayshadow;
+    outline: 1px solid $grayoutline;
+    margin-left: 2rem;
+    margin-top: 2rem;
 }
 
-.main {
-    padding: 2rem;
+// Changing the flex direction to column for smaller screen, removing border for smaller screens
+@media screen and (min-width: 150px) and (max-width: 1023px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: auto;
+    width: auto;
+    margin-left: 0;
+    margin-top: 0;
+    border: 1rem solid $gray;
+    border-radius: .25rem;
+    box-shadow: 0.25rem 0.25rem $grayshadow;
+    outline: 1px solid $grayoutline;
+  }
 }
 
-h1 {
-    color: $red;  
+@media screen and (min-width: 1024px) and (max-width: 1274px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    margin-left: 0;
+    margin-top: 0;
+    border: 3rem solid $gray;
+    border-radius: .25rem;
+    box-shadow: 0.25rem 0.25rem $grayshadow;
+    outline: 1px solid $grayoutline;
+  }
+}
+
+// Styling for the image and text below
+figure {
+  display: inline-block;
+}
+
+figure img {
+  vertical-align: top;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+figure p {
+  text-align: center;
+}
+
+figure p:first-of-type {
+  margin-top: 1rem;
+}
+
+// Setting the width for the photo item in the flex container
+.intro {
+  width: 25%;
+}
+
+// Setting the width for the photo item in the flex container on mobile
+@media screen and (min-width: 150px) and (max-width: 1023px) {
+  .intro {
+    width: auto;
+    height: auto;
+  }
+}
+
+// Setting the width for the details item in the flex container
+.intro-details {
+  padding-left: 2rem;
+  justify-content: center;
+  align-self: center;
+  background-color: $gray;
+  height: auto;
+  width: 55%;
+  margin-left: 5rem;
+}
+
+.intro-details {
+  float: right;
+}
+
+// Setting the width for the details item in the flex container on mobile
+@media screen and (min-width: 150px) and (max-width: 1023px) {
+  .intro-details {
+    padding-left: 0.5rem;
+    margin-left: 0.25rem;
+    margin-bottom: 0.5rem;
+    float: none;
+    width: auto;
+    height: auto;
+  }
+}
+
+// Setting all the "details" variables for the nested items
+.details {
+  &__label {
+    display: inline-block;
+    color: $grayfont;
+    font-family: $font;
+    font-weight: 700;
+  }
+
+  &__value {
+    display: inline-block;
+    color: $grayfont;
+    font-family: $font;
+    font-weight: 400;
+  }
+
+  &__image {
+    border-radius: 50%;
+    width: 14rem;
+    height: 14rem;
+    float: left;
+  }
+
+  &__linkedimg {
+    float: left;
+    padding-right: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  &__name {
+    color: $grayfont;
+    font-family: $font;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  &__title {
+    color: $grayfont;
+    font-family: $font;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+  }
 }
