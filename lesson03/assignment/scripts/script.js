@@ -1,10 +1,13 @@
-$(document).ready(function(el)
+$(document).ready(function() {
+
+});
+
 
 const employee = [
   {
     "name": "Steve Smith",
     "jobTitle": "Project Manager",
-    "Headshot": "img/unsplash-headshot.jpg",
+    "Headshot": "https://github.com/georgeme/html300/blob/lesson-03/lesson03/assignment/img/unsplash-headshot.jpg",
     "Company": "Front End Dev Co",
     "Experience": "3 years",
     "School": "UW",
@@ -47,16 +50,13 @@ const employee = [
   },
 ];
 
-let employeeHTML = employee.map(function(el) {
+ let detailsHTML = employee.map(function(el){
   let details = `
     <figure class="details">
-      <img class = details__image">${el.Headshot}>
+      <img class = details__image">${el.Headshot}</img>
       <p class="details__name">${el.name}</p>
       <p class="details__title">${el.jobTitle}</p>
     </figure>`;
-});
 
-$(".employee").append(employeeHTML);
-
-
+    $(".intro").append(detailsHTML);
 });
