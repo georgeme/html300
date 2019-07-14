@@ -6,11 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <!-- Adding the script URLs for the js -->
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous">
-  </script>
+
 
   <link rel="stylesheet" href="css/style.css" />
   <title>Lesson 03 Assignment</title>
@@ -22,17 +18,18 @@
 
     <!-- Separating the headshot image and name/title for the flex row and using js to populate-->
     <section class="intro"></section>
-      <!-- <figure class="details">
+      <!-- <article class="details">
               <img class="details__image" src="img/unsplash-headshot.jpg" alt="Picture of Steve Smith">
               <p class="details__name">Steve Smith</p>
               <p class="details__title">Project Manager</p>
-            </figure> -->
+            </article> -->
 
 
     <!-- Separating the details for the name/title for placement in the flex row -->
     <!-- Reusing the "details" class as well as the "label" and "value" for font family and font color -->
+<!-- test -->
     <section class="intro-details">
-      <article class="details">
+      <!-- <article class="details">
         <p class="details__label">Company: </p>
         <p class="details__value">Front End Dev Co</p>
       </article>
@@ -58,38 +55,18 @@
       </article>
 
       <article class="details">
-        <img class="details__linkedimg" src="img/linkedin.svg" alt="LinkedIn site logo">
+        <img class="details__linkedimg" src="img/linkedin.svg" alt="LinkedIn site logo"> -->
         <!-- Reused the "details" class to be able to use the "value" for the font styling -->
-        <p class="details__value">steve.linkedinprofile.com</p>
-      </article>
+        <!-- <p class="details__value">steve.linkedinprofile.com</p>
+      </article> -->
     </section>
   </main>
-  <script>const employee = [
-    {
-      "name": "Steve Smith",
-      "jobTitle": "Project Manager",
-      "Headshot": "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg",
-      "Company": "Front End Dev Co",
-      "Experience": "3 years",
-      "School": "UW",
-      "Major": "Marketing",
-      "Email": "steve@fedc.com",
-      "LinkedInUrl": "steve.linkedinprofile.com"
-    }
-
-  ];
-
-  employee.map(function(el){
-   let details = `
-     <figure class="details">
-       <img src=${el.Headshot} class="details__image" alt="Image of employee"/>
-
-       <p class="details__name">${el.name}</p>
-       <p class="details__title">${el.jobTitle}</p>
-     </figure>`;
-
-     $(".intro").append(details);
-  });</script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous">
+  </script>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
