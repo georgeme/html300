@@ -50,13 +50,13 @@ const employee = [
   },
 ];
 
- let detailsHTML = employee.map(function(el){
-  let details = `
-    <figure class="details">
-      <img class = details__image">${el.Headshot}</img>
-      <p class="details__name">${el.name}</p>
-      <p class="details__title">${el.jobTitle}</p>
-    </figure>`;
+employee.map(function(el){
+ let details = `
+   <figure class="details">
+     <img class = details__image">${el.Headshot}</img>
+     <p class="details__name">${el.name}</p>
+     <p class="details__title">${el.jobTitle}</p>
+   </figure>`;
 
-    $(".intro").append(detailsHTML);
+   $(".intro").append(details);
 });
