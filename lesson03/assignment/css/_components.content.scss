@@ -55,21 +55,21 @@ html {
 }
 
 // Styling for the image and text below
-figure {
+.details {
   display: inline-block;
 }
 
-figure img {
+.details img {
   vertical-align: top;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-figure p {
+.details p {
   text-align: center;
 }
 
-figure p:first-of-type {
+.details p:first-of-type {
   margin-top: 1rem;
 }
 
@@ -101,6 +101,13 @@ figure p:first-of-type {
   float: right;
 }
 
+.details__image {
+  border-radius: 50%;
+  width: 14rem;
+  height: 14rem;
+  float: left;
+}
+
 // Setting the width for the details item in the flex container on mobile
 @media screen and (min-width: 150px) and (max-width: 1023px) {
   .intro-details {
@@ -113,8 +120,8 @@ figure p:first-of-type {
   }
 }
 
-// Setting all the "details" variables for the nested items
-.details {
+// Setting all the "empDetail" variables for the nested items
+.empDetail {
   &__label {
     display: inline-block;
     color: $grayfont;
@@ -129,19 +136,14 @@ figure p:first-of-type {
     font-weight: 400;
   }
 
-  &__image {
-    border-radius: 50%;
-    width: 14rem;
-    height: 14rem;
-    float: left;
-  }
-
   &__linkedimg {
     float: left;
     padding-right: 0.5rem;
     margin-top: 0.5rem;
   }
+}
 
+.details {
   &__name {
     color: $grayfont;
     font-family: $font;
