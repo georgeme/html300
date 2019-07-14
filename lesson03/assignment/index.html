@@ -11,7 +11,7 @@
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous">
   </script>
-  <script src="./scripts/script.js"></script>
+
   <link rel="stylesheet" href="css/style.css" />
   <title>Lesson 03 Assignment</title>
 </head>
@@ -20,7 +20,7 @@
   <!-- Creating the container for the flex item -->
   <main class="container">
 
-    <!-- Separating the headshot image and name/title for the flex row -->
+    <!-- Separating the headshot image and name/title for the flex row and using js to populate-->
     <section class="intro"></section>
       <!-- <figure class="details">
               <img class="details__image" src="img/unsplash-headshot.jpg" alt="Picture of Steve Smith">
@@ -64,6 +64,32 @@
       </article>
     </section>
   </main>
+  <script>const employee = [
+    {
+      "name": "Steve Smith",
+      "jobTitle": "Project Manager",
+      "Headshot": "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg",
+      "Company": "Front End Dev Co",
+      "Experience": "3 years",
+      "School": "UW",
+      "Major": "Marketing",
+      "Email": "steve@fedc.com",
+      "LinkedInUrl": "steve.linkedinprofile.com"
+    }
+
+  ];
+
+  employee.map(function(el){
+   let details = `
+     <figure class="details">
+       <img src=${el.Headshot} class="details__image" alt="Image of employee"/>
+
+       <p class="details__name">${el.name}</p>
+       <p class="details__title">${el.jobTitle}</p>
+     </figure>`;
+
+     $(".intro").append(details);
+  });</script>
 </body>
 
 </html>
