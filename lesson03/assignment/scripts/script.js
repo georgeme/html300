@@ -62,6 +62,7 @@ let employeeHTML = employee.map(function(el){
    </section>`;
 
    $(".container").append(details);
+
 // });
 
 // let detailsHTML = employee.map(function(el){
@@ -99,7 +100,6 @@ let employeeHTML = employee.map(function(el){
    </section>`;
 
    $(".container").append(introDetails);
-
 });
 
 });
