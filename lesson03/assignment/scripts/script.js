@@ -51,18 +51,22 @@ const employee = [
 ];
 
 let employeeHTML = employee.map(function(el){
+
  let details = `
+ <section class="intro">
    <article class="details">
      <img src=${el.Headshot} class="details__image" alt="Image of employee"/>
      <p class="details__name">${el.name}</p>
      <p class="details__title">${el.jobTitle}</p>
-   </article>`;
+   </article>
+   </section>`;
 
-   $(".intro").append(details);
-});
+   $(".container").append(details);
+// });
 
-let detailsHTML = employee.map(function(el){
+// let detailsHTML = employee.map(function(el){
  let introDetails = `
+ <section class="intro-details">
    <article class="empDetail">
      <p class="empDetail__label">Company: </p>
      <p class="empDetail__value">${el.Company}</p>
@@ -86,9 +90,16 @@ let detailsHTML = employee.map(function(el){
    <article class="empDetail">
      <p class="empDetail__label">Email: </p>
      <p class="empDetail__value">${el.Email}</p>
-   </article>`;
+   </article>
 
-   $(".intro-details").append(introDetails);
+   <article class="empDetail">
+     <img src="img/linkedin.svg" class="empDetail__linkedimg" alt="LinkedIn logo"/>
+     <p class="empDetail__value">${el.LinkedInUrl}</p>
+   </article>
+   </section>`;
+
+   $(".container").append(introDetails);
+
 });
 
 });
