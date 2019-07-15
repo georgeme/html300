@@ -1,5 +1,7 @@
+// Ensuring the html doc loads before the JS loads
 $(document).ready(function() {
 
+// Adding employee data variable/details from the json to use for the cards. Added the Headshot/URL for the photos that were missing
 const employee = [
   {
     "name": "Steve Smith",
@@ -50,56 +52,53 @@ const employee = [
   },
 ];
 
+// Referencing the employee data and using the map function to add it to each card
 let employeeHTML = employee.map(function(el){
+// Creating the "card" container inside the container as the html template (to make styling easier)
+// Creating a section under the "card" to allow for styling of the details didplaying to the right of the image/name/job title
+  let card = `
+    <section class="card">
+      <article class="details">
+        <img src=${el.Headshot} class="details__image" alt="Image of employee"/>
+        <p class="details__name">${el.name}</p>
+        <p class="details__title">${el.jobTitle}</p>
+      </article>
 
- let details = `
- <section class="intro">
-   <article class="details">
-     <img src=${el.Headshot} class="details__image" alt="Image of employee"/>
-     <p class="details__name">${el.name}</p>
-     <p class="details__title">${el.jobTitle}</p>
-   </article>
-   </section>`;
+        <section class="detailsContainer">
+          <article class="empDetail">
+            <p class="empDetail__label">Company: </p>
+            <p class="empDetail__value">${el.Company}</p>
+          </article>
 
-   $(".container").append(details);
+          <article class="empDetail">
+            <p class="empDetail__label">Experience: </p>
+            <p class="empDetail__value">${el.Experience}</p>
+          </article>
 
-// });
+          <article class="empDetail">
+            <p class="empDetail__label">School: </p>
+            <p class="empDetail__value">${el.School}</p>
+          </article>
 
-// let detailsHTML = employee.map(function(el){
- let introDetails = `
- <section class="intro-details">
-   <article class="empDetail">
-     <p class="empDetail__label">Company: </p>
-     <p class="empDetail__value">${el.Company}</p>
-   </article>
+          <article class="empDetail">
+            <p class="empDetail__label">Major: </p>
+            <p class="empDetail__value">${el.Major}</p>
+          </article>
 
-   <article class="empDetail">
-     <p class="empDetail__label">Experience: </p>
-     <p class="empDetail__value">${el.Experience}</p>
-   </article>
+          <article class="empDetail">
+            <p class="empDetail__label">Email: </p>
+            <p class="empDetail__value">${el.Email}</p>
+          </article>
 
-   <article class="empDetail">
-     <p class="empDetail__label">School: </p>
-     <p class="empDetail__value">${el.School}</p>
-   </article>
+          <article class="empDetail">
+            <img src="img/linkedin.svg" class="empDetail__linkedimg" alt="LinkedIn logo"/>
+            <p class="empDetail__value">${el.LinkedInUrl}</p>
+          </article>
+        </section>
+    </section>`;
+// Appending the data to the "container" section in the html
+  $(".container").append(card);
 
-   <article class="empDetail">
-     <p class="empDetail__label">Major: </p>
-     <p class="empDetail__value">${el.Major}</p>
-   </article>
-
-   <article class="empDetail">
-     <p class="empDetail__label">Email: </p>
-     <p class="empDetail__value">${el.Email}</p>
-   </article>
-
-   <article class="empDetail">
-     <img src="img/linkedin.svg" class="empDetail__linkedimg" alt="LinkedIn logo"/>
-     <p class="empDetail__value">${el.LinkedInUrl}</p>
-   </article>
-   </section>`;
-
-   $(".container").append(introDetails);
 });
 
 });
