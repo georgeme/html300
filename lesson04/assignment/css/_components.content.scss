@@ -2,6 +2,40 @@ html {
     box-sizing: border-box;
 }
 
-header img{
-  height: 25rem;
+#rotate {
+  position: relative;
+  // height: 30rem;
+  // width: 100%;
+  // margin: 0 auto;
+}
+
+#rotate img {
+  position: absolute;
+  height: 30rem;
+  width: 100%;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes changeImage {
+  0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+.first-image {
+animation-name: changeImage;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 10s;
+animation-direction: alternate;
 }
