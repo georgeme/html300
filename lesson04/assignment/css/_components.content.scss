@@ -2,27 +2,23 @@ html {
     box-sizing: border-box;
 }
 
+// Adding the relative position for the "rotate" section
 #rotate {
   position: relative;
-  // height: 30rem;
-  // width: 100%;
-  // margin: 0 auto;
 }
 
+// Sizing the images and adding the animation properties
 #rotate img {
   position: absolute;
   height: 30rem;
   width: 100%;
-//   -webkit-animation-name: changeImage;
-// -webkit-animation-iteration-count: infinite;
-// -webkit-animation-duration: 20s;
   animation-name: changeImage;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-duration: 8s;
 }
 
-
+// Adding the keyframes percentages/opacity for the changeImage animations
 @keyframes changeImage {
   0% {
     opacity:1;
@@ -41,6 +37,7 @@ html {
   }
 }
 
+// Creating the animation-delay timing for the four images in rotation
 #rotate img:nth-of-type(1) {
   animation-delay: 6s;
 }
@@ -54,32 +51,10 @@ html {
   animation-delay: 0;
 }
 
-// @keyframes changeImage {
-//   0% {
-//     opacity:0;
-//   }
-//
-//   66% {
-//     opacity:0;
-//   }
-//
-//   100% {
-//     opacity:1;
-//   }
-// }
-//
-// #clapper {
-//   animation-delay: 18s;
-// }
-//
-// #reel {
-//   animation-delay: 12s;
-// }
-//
-// #theater {
-//  animation-delay: 6s;
-// }
-//
-// #film {
-//  animation-delay: 0s;
-// }
+ul {
+  list-style-type: none;
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: #e6e6e6;
+}
