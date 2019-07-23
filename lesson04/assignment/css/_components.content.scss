@@ -20,6 +20,13 @@ html {
   animation-duration: 8s;
 }
 
+@media screen and (max-width: 767px) {
+  #rotate img {
+    height: 20rem;
+    width: 100%;
+  }
+}
+
 // Adding the keyframes percentages/opacity for the changeImage animations
 @keyframes changeImage {
   0% {
@@ -53,6 +60,7 @@ html {
   animation-delay: 0;
 }
 
+// Styling and positioning navigation
 ul {
   list-style-type: none;
   position: absolute;
@@ -62,25 +70,63 @@ ul {
   padding: 1rem;
 }
 
+@media screen and (max-width: 767px) {
+  ul {
+    top: 20rem;
+    padding: 0;
+  }
+}
+
+.navigation {
+  float: left;
+  border-right: 3px solid #003399;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    border: none;
+  }
+}
+
+.navigation a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: .75em .75em;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation a {
+    padding: 0;
+  }
+}
+
+.navigation:last-child {
+  border-right: none;
+}
+
+// Styling the figure element for the navigation
 figure {
+  height: 10rem;
+  width: 20rem;
   display: block;
   position: relative;
   overflow: hidden;
 }
 
+@media screen and (max-width: 767px) {
+  figure {
+    height: 10rem;
+    width: 15rem;
+  }
+
+// Adding the transition to overlay the figure caption on hover
 figcaption {
   position: absolute;
   background: rgba(0,0,0,0.75);
   color: white;
-  padding: 10px 20px;
-}
-
-figcaption {
-  position: absolute;
-  background: rgba(0,0,0,0.75);
-  color: white;
-  padding: 10px 20px;
-
+  margin-left: 3px;
+  padding: 10px 10px;
   opacity: 0;
   bottom: 0;
   left: -30%;
@@ -89,21 +135,25 @@ figcaption {
   -o-transition:      all 0.6s ease;
 }
 
+@media screen and (max-width: 767px) {
+  figcaption {
+    opacity: 1;
+    background: rgba(0,0,0,1.0);
+    text-align: center;
+    left: 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  figcaption h3 {
+    margin-top: 1rem;
+  }
+}
+
 figure:hover figcaption {
   opacity: 1;
   left: 0;
-}
-
-.navigation {
-  float: left;
-  border-right: 3px solid #003399;
-}
-
-.navigation a {
-  display: block;
-  padding: .75em .75em;
-}
-
-.navigation:last-child {
-  border-right: none;
 }
