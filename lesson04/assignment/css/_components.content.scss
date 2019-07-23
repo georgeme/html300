@@ -4,14 +4,14 @@ html {
 
 // Adding the relative position for the "rotate" section
 #rotate {
-  position: relative;
+  @include rel;
 }
 
 // Sizing the images and adding the animation properties
 #rotate img {
-  position: absolute;
+  @include abso;
   top: 0;
-  left: 0;
+  @include left;
   height: 30rem;
   width: 100%;
   animation-name: changeImage;
@@ -20,7 +20,8 @@ html {
   animation-duration: 8s;
 }
 
-@media screen and (max-width: 767px) {
+// Size for header images on smaller devices
+@media screen and (max-width: 1025px) {
   #rotate img {
     height: 20rem;
     width: 100%;
@@ -30,19 +31,19 @@ html {
 // Adding the keyframes percentages/opacity for the changeImage animations
 @keyframes changeImage {
   0% {
-    opacity:1;
+    @include opaq;
   }
   17% {
-    opacity:1;
+    @include opaq;
   }
   25% {
-    opacity:0;
+    @include nonOpaq;
   }
   92% {
-    opacity:0;
+    @include nonOpaq;
   }
   100% {
-    opacity:1;
+    @include opaq;
   }
 }
 
@@ -60,17 +61,17 @@ html {
   animation-delay: 0;
 }
 
-// Styling and positioning navigation
+// Styling and positioning list ul for navigation including media queries for smaller screens
 ul {
   list-style-type: none;
-  position: absolute;
+  @include abso;
   top: 30rem;
-  left: 0;
+  @include left;
   margin: 0;
   padding: 1rem;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1025px) {
   ul {
     top: 20rem;
     padding: 0;
@@ -91,7 +92,7 @@ ul {
 .navigation a {
   display: block;
   text-decoration: none;
-  color: white;
+  @include white;
   padding: .75em .75em;
 }
 
@@ -105,29 +106,23 @@ ul {
   border-right: none;
 }
 
-// Styling the figure element for the navigation
+// Styling the figure element for the navigation including media queries for smaller screens
 figure {
-  height: 10rem;
-  width: 20rem;
+  height: 8rem;
+  width: 15rem;
   display: block;
-  position: relative;
+  @include rel;
   overflow: hidden;
 }
 
-@media screen and (max-width: 767px) {
-  figure {
-    height: 10rem;
-    width: 15rem;
-  }
-
-// Adding the transition to overlay the figure caption on hover
+// Adding the navigation transition to overlay the figure caption on hover
 figcaption {
-  position: absolute;
+  @include abso;
   background: rgba(0,0,0,0.75);
-  color: white;
+  @include white;
   margin-left: 3px;
   padding: 10px 10px;
-  opacity: 0;
+  @include nonOpaq;
   bottom: 0;
   left: -30%;
   -webkit-transition: all 0.6s ease;
@@ -135,25 +130,28 @@ figcaption {
   -o-transition:      all 0.6s ease;
 }
 
-@media screen and (max-width: 767px) {
+// Removing the navigation transition for the media queries for smaller screens
+@media screen and (max-width: 1025px) {
   figcaption {
-    opacity: 1;
+    @include opaq;
     background: rgba(0,0,0,1.0);
     text-align: center;
-    left: 0;
+    @include left;
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;
   }
 }
 
+// Changing the margin for the figcaption h3 on smaller screens
 @media screen and (max-width: 767px) {
   figcaption h3 {
     margin-top: 1rem;
   }
 }
 
+// Hover affect for the figcaption (removed for smaller screens)
 figure:hover figcaption {
-  opacity: 1;
-  left: 0;
+  @include opaq;
+  @include left;
 }
