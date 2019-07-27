@@ -11,3 +11,29 @@ html {
 .main {
     padding: 2rem;
 }
+
+.nav {
+  background: $teal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+    &-wrap {
+      max-width: 1920px;
+    }
+    &__logo,
+    &__login {
+      font-size: 28px;
+      color: $white;
+      font-family: $font-fam;
+      text-decoration: none;
+      margin: 0 auto 2rem;
+      width: 100%;
+      text-align: center;
+        @include media-query(tab) {
+          margin: 0;
+          width: auto;
+    }
+  }
