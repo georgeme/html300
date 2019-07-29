@@ -14,21 +14,19 @@ html {
   grid-template-areas:
     "header"
     "nav"
-    "left"
-    "right"
+    "sidebar"
+    "main-content"
     "footer"
-  // grid-template-columns: auto 374px 826px auto;
-  // grid-template-rows: 149px 81px 649px 152px;
 }
 
 @media (min-width: 500px) {
   .main {
     grid-template-columns: 30% 70%;
-    grid-template-rows: 1.5fr 1fr 3fr 1.5fr
+    grid-template-rows: 1.5fr 1fr 7.5fr 1.5fr;
     grid-template-areas:
       "header header"
       "nav nav"
-      "left right"
+      "sidebar main-content"
       "footer footer";
   }
 
@@ -40,7 +38,7 @@ html {
     padding: 0 0;
   }
 }
-}
+
 
 // Styling the header (including image) and setting the grid locations
 .head {
@@ -100,6 +98,7 @@ html {
 
 // Styling the sidebar section and setting the grid locations
 .sidebar {
+  grid-area: sidebar;
   background: $purple;
   display: flex;
   justify-content: center;
@@ -114,6 +113,7 @@ html {
 
 // Styling the main content section and setting the grid locations
 .content {
+  grid-area: main-content;
   background: $orange;
   display: flex;
   justify-content: center;
@@ -128,6 +128,7 @@ html {
 
 // Styling the footer section and setting the grid locations
 .foot {
+  grid-area: footer;
   background-color: $blue;
   display: flex;
   justify-content: center;
