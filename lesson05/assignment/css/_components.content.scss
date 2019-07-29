@@ -9,5 +9,59 @@ html {
 }
 
 .main {
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: 361px 374px 649px 359px;
+  grid-template-rows: 149px 81px 374px 152px;
 }
+
+.head {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  background-color: $red;
+}
+
+.head__text {
+  text-align: center;
+  color: $white;
+  font-size: $sans-size;
+  font-family: $sans-font;
+}
+
+.nav {
+  background: $green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+  flex: auto;
+}
+
+.nav__list {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.nav__item {
+  display: inline-block;
+  font-size: $sans-size;
+  font-family: $sans-font;
+  margin-right: 8rem;
+    &:last-of-type {
+      margin: 0;
+  }
+}
+
+.nav__link {
+  text-decoration: none;
+  color: $white;
+}
+
+// .nav-wrap {
+//   max-width: 1200px;
+//   max-height: 81px;
+// }
