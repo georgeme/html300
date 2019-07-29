@@ -1,0 +1,169 @@
+html {
+    box-sizing: border-box;
+}
+
+// Adding the relative position for the "rotate" section
+#rotate {
+  @include rel;
+}
+
+// Sizing the images and adding the animation properties
+#rotate img {
+  @include abso;
+  top: 0;
+  @include left;
+  height: 30rem;
+  width: 100%;
+  animation-name: changeImage;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 8s;
+}
+
+// Size for header images on smaller devices
+@media screen and (max-width: 1025px) {
+  #rotate img {
+    height: 20rem;
+    width: 100%;
+  }
+}
+
+// Adding the keyframes percentages/opacity for the changeImage animations
+@keyframes changeImage {
+  0% {
+    @include opaq;
+  }
+  17% {
+    @include opaq;
+  }
+  25% {
+    @include nonOpaq;
+  }
+  92% {
+    @include nonOpaq;
+  }
+  100% {
+    @include opaq;
+  }
+}
+
+// Creating the animation-delay timing for the four images in rotation
+#rotate img:nth-of-type(1) {
+  animation-delay: 6s;
+}
+#rotate img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+#rotate img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+
+// Styling and positioning list ul for navigation including media queries for smaller screens
+ul {
+  list-style-type: none;
+  @include abso;
+  top: 30rem;
+  @include left;
+  margin: 0;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1025px) {
+  ul {
+    top: 20rem;
+    padding: 0;
+    margin-top: 3rem;
+  }
+}
+
+.navigation {
+  float: left;
+  border-right: 3px solid #003399;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    border: none;
+  }
+}
+
+.navigation a {
+  display: block;
+  text-decoration: none;
+  @include white;
+  padding: .75em .75em;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation a {
+    padding: 0;
+  }
+}
+
+.navigation:last-child {
+  border-right: none;
+}
+
+// Styling the figure element for the navigation including media queries for smaller screens
+figure {
+  height: 8rem;
+  width: 15rem;
+  display: block;
+  @include rel;
+  overflow: hidden;
+}
+
+// Adding the navigation transition to overlay the figure caption on hover
+figcaption {
+  @include abso;
+  background: rgba(0,0,0,0.75);
+  @include white;
+  margin-left: 3px;
+  padding: 10px 10px;
+  @include nonOpaq;
+  bottom: 0;
+  left: -30%;
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-duration: 0.6s;
+}
+
+// Removing the navigation transition for the media queries for smaller screens
+@media screen and (max-width: 1025px) {
+  figcaption {
+    @include opaq;
+    background: rgba(0,0,0,1.0);
+    text-align: center;
+    @include left;
+    transition-property: none;
+  }
+}
+
+// Changing the margin for the figcaption h3 on smaller screens
+@media screen and (max-width: 767px) {
+  figcaption h3 {
+    margin-top: 1rem;
+  }
+}
+
+// Hover affect for the figcaption (removed for smaller screens)
+figure:hover figcaption {
+  @include opaq;
+  @include left;
+}
+
+// Including styling for my "inspirations" for the components used in the site
+.inspiration {
+  @include rel;
+  top: 40rem;
+  @include left;
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .inspiration {
+    @include rel;
+    top: 60rem;
+    @include left;
+  }
+}

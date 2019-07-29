@@ -1,0 +1,28 @@
+// **Mixins**
+// Mixins for opacity
+@mixin opaq {
+  opacity: 1;
+}
+
+@mixin nonOpaq {
+  opacity: 0;
+}
+
+// Mixin for left
+@mixin left {
+  left: 0;
+}
+
+// Mixin for white fonts used in hover and opacity
+@mixin white {
+  color: white;
+}
+
+// Mixins for absolute or relative positions
+@mixin abso {
+  position: absolute;
+}
+
+@mixin rel {
+  position: relative;
+}
