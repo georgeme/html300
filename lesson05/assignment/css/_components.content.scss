@@ -8,26 +8,6 @@ html {
     box-sizing: inherit;
 }
 
-.head {
-  grid-area: header;
-}
-
-.navigation {
-  grid-area: nav;
-}
-
-.sidebar {
-  grid-area: left;
-}
-
-.content {
-  grid-area: right;
-}
-
-.foot {
-  grid-area: footer;
-}
-
 // Creating the grid for the entire page
 .main {
   display: grid;
@@ -43,13 +23,15 @@ html {
 
 @media (min-width: 500px) {
   .main {
-    grid-template-columns: 1fr 1.5fr 3.5fr 1fr;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1.5fr 1fr 3fr 1.5fr
     grid-template-areas:
-      "header header header header"
-      "nav nav nav nav"
-      "left content content"
-      "footer footer footer footer";
+      "header header"
+      "nav nav"
+      "left right"
+      "footer footer";
   }
+
   nav ul {
     display: block;
     justify-content: space-between;
@@ -58,13 +40,11 @@ html {
     padding: 0 0;
   }
 }
+}
 
 // Styling the header (including image) and setting the grid locations
 .head {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 1;
+  grid-area: header;
   background-image: url("/images/film-reel.jpg");
   background-size: cover;
   display: flex;
@@ -81,6 +61,7 @@ html {
 
 // Styling the navigation and setting grid locations
 .navigation {
+  grid-area: nav;
   background: $green;
   display: flex;
   justify-content: space-between;
@@ -90,10 +71,6 @@ html {
   flex: auto;
 
   &-container {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
     max-width: 1200px;
   }
 
@@ -123,10 +100,6 @@ html {
 
 // Styling the sidebar section and setting the grid locations
 .sidebar {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 3;
   background: $purple;
   display: flex;
   justify-content: center;
@@ -141,10 +114,6 @@ html {
 
 // Styling the main content section and setting the grid locations
 .content {
-  grid-column-start: 3;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 3;
   background: $orange;
   display: flex;
   justify-content: center;
@@ -159,10 +128,6 @@ html {
 
 // Styling the footer section and setting the grid locations
 .foot {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 4;
-  grid-row-end: 4;
   background-color: $blue;
   display: flex;
   justify-content: center;
