@@ -8,31 +8,35 @@ html {
     box-sizing: inherit;
 }
 
+// Creating the grid for the entire page
 .main {
   display: grid;
   grid-template-columns: auto 374px 826px auto;
   grid-template-rows: 149px 81px 649px 152px;
 }
 
+// Styling the header (including image) and setting the grid locations
 .head {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 1;
-  background-color: $red;
+  background-image: url("/images/film-reel.jpg");
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__text {
+    margin-top: 2rem;
+    color: $white;
+    font-size: $sans-size;
+    font-family: $sans-font;
+  }
 }
 
-.head__text {
-  margin-top: 2rem;
-  color: $white;
-  font-size: $sans-size;
-  font-family: $sans-font;
-}
-
-.nav {
+// Styling the navigation and setting grid locations
+.navigation {
   background: $green;
   display: flex;
   justify-content: space-between;
@@ -40,38 +44,40 @@ html {
   padding: 1rem 1rem;
   flex-wrap: wrap;
   flex: auto;
-}
 
-.nav-wrap {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 2;
-}
+  &-container {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    max-width: 1200px;
+  }
 
-.nav__list {
-  padding: 0;
-  margin: 0 auto;
-  list-style: none;
-  text-align: center;
-}
+  &__list {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+  }
 
-.nav__item {
-  display: inline-block;
-  font-size: $sans-size;
-  font-family: $sans-font;
-  padding: 0.5rem 0.5rem;
-  margin-right: 6rem;
-    &:last-of-type {
-      margin: 0;
+  &__item {
+    display: inline-block;
+    font-size: $sans-size;
+    font-family: $sans-font;
+    padding: 0.5rem 0.5rem;
+    margin-right: 6rem;
+      &:last-of-type {
+        margin: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white;
   }
 }
 
-.nav__link {
-  text-decoration: none;
-  color: $white;
-}
-
+// Styling the sidebar section and setting the grid locations
 .sidebar {
   grid-column-start: 2;
   grid-column-end: 2;
@@ -81,14 +87,15 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__text {
+    color: $white;
+    font-size: $sans-size;
+    font-family: $sans-font;
+  }
 }
 
-.sidebar__text {
-  color: $white;
-  font-size: $sans-size;
-  font-family: $sans-font;
-}
-
+// Styling the main content section and setting the grid locations
 .content {
   grid-column-start: 3;
   grid-column-end: 3;
@@ -98,14 +105,15 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &__text {
+    color: $white;
+    font-size: $sans-size;
+    font-family: $sans-font;
+  }
 }
 
-.content__text {
-  color: $white;
-  font-size: $sans-size;
-  font-family: $sans-font;
-}
-
+// Styling the footer section and setting the grid locations
 .foot {
   grid-column-start: 2;
   grid-column-end: 4;
@@ -115,10 +123,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.foot__text {
-  color: $white;
-  font-size: $sans-size;
-  font-family: $sans-font;
+  &__text {
+    color: $white;
+    font-size: $sans-size;
+    font-family: $sans-font;
+  }
 }
