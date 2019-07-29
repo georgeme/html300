@@ -371,18 +371,18 @@ html {
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 1;
-  background-color: #f1352b;
+  background-image: url("/images/film-reel.jpg");
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center; }
+  .head__text {
+    margin-top: 2rem;
+    color: #ffffff;
+    font-size: 32px;
+    font-family: "Helvetica Neue", Arial, sans-serif; }
 
-.head__text {
-  margin-top: 2rem;
-  color: #ffffff;
-  font-size: 32px;
-  font-family: "Helvetica Neue", Arial, sans-serif; }
-
-.nav {
+.navigation {
   background: #7acb00;
   display: flex;
   justify-content: space-between;
@@ -390,31 +390,28 @@ html {
   padding: 1rem 1rem;
   flex-wrap: wrap;
   flex: auto; }
-
-.nav-wrap {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 2; }
-
-.nav__list {
-  padding: 0;
-  margin: 0 auto;
-  list-style: none;
-  text-align: center; }
-
-.nav__item {
-  display: inline-block;
-  font-size: 32px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  padding: 0.5rem 0.5rem;
-  margin-right: 6rem; }
-  .nav__item:last-of-type {
-    margin: 0; }
-
-.nav__link {
-  text-decoration: none;
-  color: #ffffff; }
+  .navigation-container {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    max-width: 1200px; }
+  .navigation__list {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center; }
+  .navigation__item {
+    display: inline-block;
+    font-size: 32px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    padding: 0.5rem 0.5rem;
+    margin-right: 6rem; }
+    .navigation__item:last-of-type {
+      margin: 0; }
+  .navigation__link {
+    text-decoration: none;
+    color: #ffffff; }
 
 .sidebar {
   grid-column-start: 2;
@@ -425,11 +422,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center; }
-
-.sidebar__text {
-  color: #ffffff;
-  font-size: 32px;
-  font-family: "Helvetica Neue", Arial, sans-serif; }
+  .sidebar__text {
+    color: #ffffff;
+    font-size: 32px;
+    font-family: "Helvetica Neue", Arial, sans-serif; }
 
 .content {
   grid-column-start: 3;
@@ -440,11 +436,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center; }
-
-.content__text {
-  color: #ffffff;
-  font-size: 32px;
-  font-family: "Helvetica Neue", Arial, sans-serif; }
+  .content__text {
+    color: #ffffff;
+    font-size: 32px;
+    font-family: "Helvetica Neue", Arial, sans-serif; }
 
 .foot {
   grid-column-start: 2;
@@ -455,8 +450,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center; }
-
-.foot__text {
-  color: #ffffff;
-  font-size: 32px;
-  font-family: "Helvetica Neue", Arial, sans-serif; }
+  .foot__text {
+    color: #ffffff;
+    font-size: 32px;
+    font-family: "Helvetica Neue", Arial, sans-serif; }
