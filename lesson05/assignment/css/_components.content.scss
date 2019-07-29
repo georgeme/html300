@@ -8,11 +8,55 @@ html {
     box-sizing: inherit;
 }
 
+.head {
+  grid-area: header;
+}
+
+.navigation {
+  grid-area: nav;
+}
+
+.sidebar {
+  grid-area: left;
+}
+
+.content {
+  grid-area: right;
+}
+
+.foot {
+  grid-area: footer;
+}
+
 // Creating the grid for the entire page
 .main {
   display: grid;
-  grid-template-columns: auto 374px 826px auto;
-  grid-template-rows: 149px 81px 649px 152px;
+  grid-template-areas:
+    "header"
+    "nav"
+    "left"
+    "right"
+    "footer"
+  // grid-template-columns: auto 374px 826px auto;
+  // grid-template-rows: 149px 81px 649px 152px;
+}
+
+@media (min-width: 500px) {
+  .main {
+    grid-template-columns: 1fr 1.5fr 3.5fr 1fr;
+    grid-template-areas:
+      "header header header header"
+      "nav nav nav nav"
+      "left content content"
+      "footer footer footer footer";
+  }
+  nav ul {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    padding: 0 0;
+  }
 }
 
 // Styling the header (including image) and setting the grid locations
