@@ -365,25 +365,20 @@ html {
   display: grid;
   grid-template-areas: "header" "nav" "sidebar" "main-content" "footer"; }
 
-@media (min-width: 500px) {
+@media screen and (min-width: 1024px) {
   .main {
     grid-template-columns: 30% 70%;
-    grid-template-rows: 1.5fr 1fr 7.5fr 1.5fr;
-    grid-template-areas: "header header" "nav nav" "sidebar main-content" "footer footer"; }
-  nav ul {
-    display: block;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1em;
-    padding: 0 0; } }
+    grid-template-rows: 3fr 1fr 7.5fr 3fr;
+    grid-template-areas: "header header" "nav nav" "sidebar main-content" "footer footer"; } }
 
 .head {
   grid-area: header;
   background-image: url("/images/film-reel.jpg");
   background-size: cover;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0.5rem; }
   .head__text {
     margin-top: 2rem;
     color: #ffffff;
@@ -399,8 +394,6 @@ html {
   padding: 1rem 1rem;
   flex-wrap: wrap;
   flex: auto; }
-  .navigation-container {
-    max-width: 1200px; }
   .navigation__list {
     padding: 0;
     margin: 0 auto;
@@ -414,6 +407,13 @@ html {
     margin-right: 6rem; }
     .navigation__item:last-of-type {
       margin: 0; }
+  @media screen and (max-width: 1023px) {
+    .navigation__item {
+      display: block;
+      height: auto;
+      font-size: 1.5em;
+      padding: 0;
+      margin: 0; } }
   .navigation__link {
     text-decoration: none;
     color: #ffffff; }
@@ -422,27 +422,40 @@ html {
   grid-area: sidebar;
   background: #6e27c5;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  flex-direction: column;
+  padding: 0.5rem; }
+  .sidebar__img {
+    height: 200px;
+    width: 100%; }
   .sidebar__text {
     color: #ffffff;
-    font-size: 32px;
+    font-size: 1em;
     font-family: "Helvetica Neue", Arial, sans-serif; }
 
 .content {
   grid-area: main-content;
   background: #ff6600;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  flex-direction: column;
+  padding: 0.5rem; }
+  .content__heading {
+    color: #ffffff;
+    font-family: "Helvetica Neue", Arial, sans-serif; }
   .content__text {
     color: #ffffff;
-    font-size: 32px;
+    font-size: 1em;
+    font-family: "Helvetica Neue", Arial, sans-serif; }
+  .content__img {
+    height: 200px;
+    width: 100%; }
+  .content__list {
+    font-size: 1.5em;
     font-family: "Helvetica Neue", Arial, sans-serif; }
 
 .foot {
   grid-area: footer;
-  background-color: #150f96;
+  background-image: url("/images/red-film.jpg");
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center; }
