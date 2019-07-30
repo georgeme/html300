@@ -35,7 +35,7 @@ html {
 // Styling the header (including background image) and setting the grid locations
 .head {
   grid-area: header;
-  background-image: url("/images/film-reel.jpg" alt="Image of blue cinema film");
+  background-image: url("/images/film-reel.jpg");
   background-size: cover;
   display: flex;
   justify-content: flex-end;
@@ -105,7 +105,7 @@ html {
   padding: 0.5rem;
 
   &__img {
-    height: 200px;
+    max-height: auto;
     width: 100%;
   }
 
@@ -136,7 +136,7 @@ html {
   }
 
   &__img {
-    height: 200px;
+    height: auto;
     width: 100%;
   }
 
@@ -149,7 +149,7 @@ html {
 // Styling the footer section and setting the grid locations
 .foot {
   grid-area: footer;
-  background-image: url("/images/red-film.jpg" alt="Image of red cinema film");
+  background-image: url("/images/red-film.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
