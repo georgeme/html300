@@ -425,7 +425,7 @@ html {
   flex-direction: column;
   padding: 0.5rem; }
   .sidebar__img {
-    height: 200px;
+    max-height: auto;
     width: 100%; }
   .sidebar__text {
     color: #ffffff;
@@ -446,7 +446,7 @@ html {
     font-size: 1em;
     font-family: "Helvetica Neue", Arial, sans-serif; }
   .content__img {
-    height: 200px;
+    height: auto;
     width: 100%; }
   .content__list {
     font-size: 1.5em;
