@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <title>Sleeper Movie Fun!</title>
 </head>
-<body>
-  <main class="main">
 
-  </main>
+<body>
+
+<!-- Creating the "header" with rotating images -->
+  <header id="rotate">
+    <img src="images/clapperboard.png" alt="Image of clapperboard">
+    <img src="images/film-reel.jpg" alt="Image of movie film and reel">
+    <img src="images/movie-theater.jpg" alt="Image of the inside of a movie theater">
+    <img src="images/film.jpg" alt="Image of movie film">
+  </header>
+
+<!-- Creating the ul to be used for the navigation. Including the figure/figcaption to use on hover on the desktop version and to show on smaller screens -->
+  <ul>
+    <li class="navigation">
+      <figure>
+        <a href="index.html"><img src="images/hollywood.jpg" alt="Image of the Hollywood sign on the hill"></a>
+        <figcaption>
+          <a href="index.html"><h3>Home</h3></a>
+        </figcaption>
+      </figure>
+    </li>
+
+    <li class="navigation">
+      <figure>
+        <a href="index.html"><img src="images/movie.png" alt="Image of movie film"></a>
+        <figcaption>
+          <a href="index.html"><h3>Movies</h3></a>
+        </figcaption>
+      </figure>
+
+      <li class="navigation">
+        <figure>
+          <a href="index.html"><img src="images/popcorn.jpg" alt="Image of movie popcorn"></a>
+          <figcaption>
+            <a href="index.html"><h3>Link1</h3></a>
+          </figcaption>
+        </figure>
+  </ul>
+
+<!-- Adding the details for my inspirations -->
+  <section class="inspiration">
+    <h4>My inspirations: </h4>
+      <p>For my animated header: https://www.royalnissan.com/</p>
+      <p>I love the rotating hero/slide at the top of the page (full disclosure this is a site from my company). It's a huge product for us and very complex but I loved the idea of the rotation. I obviously wasn't able to do that type of animation but I was able to get rotating images. I learned about the way to transition the "figcaption" later in the assignment when I realized I had used animation and not "transition" per the assingment requirements so I didn't have time to add text to my header in the same way I have it for the navigation items. I may change that later so I can have the figcaptions the way I have them on smaller mobile devices (opaque, on the images) but we'll see. I didn't paste code here because I actually made a rotating header (very much simplified of course) for my site.</p>
+
+      <p>For my navigation: SAA + my own idea</p>
+      <p>We have the ability to use images as links (the hero slides can be as well as any other images the client chooses to make this way). I always think that's a cool, clean way to get you to another page. Then I thought, wouldn't it be cool to use that for the navigation but realized the images I wanted to use (while I think they're cool) don't really convey where you're going on the site so I realized I would need text as well. Since movies are totally visual, and in keeping with that "picture visual idea" I didn't want to add text to the site by default so decided to add it as a hover on the desktop site. That's not really practical for mobile but again, I didn't want to lose the theme so I used the "hover" effect as the mobile text but removed the transition.</p>
+
+      <p>For my mixins: discussion from Office Hours 7/28</p>
+      <p>When I asked about this during OH, Bryce showed an example of the font size mixin. I thought about that and realized that you can use mixins to replace/style any element you will style the same way repeatedly. I then looked at my css and found the areas that I used the same styling for continuously such as opacity, position, etc. That was how I came up with my mixins.</p>
+  </section>
+
 </body>
+<!-- test -->
 </html>
