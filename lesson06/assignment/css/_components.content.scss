@@ -11,3 +11,94 @@ html {
 .main {
     padding: 2rem;
 }
+
+// Styling and positioning list ul for navigation including media queries for smaller screens
+ul {
+  list-style-type: none;
+  left: 0;
+  margin: 0;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1025px) {
+  ul {
+    padding: 0;
+    margin-top: 3rem;
+  }
+}
+
+.navigation {
+  float: left;
+  border-right: 3px solid #003399;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    border: none;
+  }
+}
+
+.navigation a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: .75em .75em;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation a {
+    padding: 0;
+  }
+}
+
+.navigation:last-child {
+  border-right: none;
+}
+
+// Styling the figure element for the navigation including media queries for smaller screens
+figure {
+  height: 8rem;
+  width: 15rem;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+// Adding the navigation transition to overlay the figure caption on hover
+figcaption {
+  position: absolute;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  margin-left: 3px;
+  padding: 10px 10px;
+  opacity: 0;
+  bottom: 0;
+  left: -30%;
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-duration: 0.6s;
+}
+
+// Removing the navigation transition for the media queries for smaller screens
+@media screen and (max-width: 1025px) {
+  figcaption {
+    opacity: 1;
+    background: rgba(0,0,0,1.0);
+    text-align: center;
+    left: 0;
+    transition-property: none;
+  }
+}
+
+// Changing the margin for the figcaption h3 on smaller screens
+@media screen and (max-width: 767px) {
+  figcaption h3 {
+    margin-top: 1rem;
+  }
+}
+
+// Hover affect for the figcaption (removed for smaller screens)
+figure:hover figcaption {
+  opacity: 1;
+  left: 0;
+}
