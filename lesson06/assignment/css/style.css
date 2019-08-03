@@ -375,9 +375,7 @@ body {
 
 #myCarousel .carousel-caption {
   color: white;
-  text-align: center;
-  left: auto;
-  /*Added*/ }
+  left: auto; }
 
 ul {
   list-style-type: none;
