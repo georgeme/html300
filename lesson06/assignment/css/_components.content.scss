@@ -9,13 +9,12 @@ html {
 }
 
 body {
-  background-image: url("images/background.png");
-  background-size: cover;
+  background-color: #d6e0f5;
 }
 
-.main {
-    padding: 2rem;
-}
+// .main {
+//     padding: 2rem;
+// }
 
 .carousel-inner img {
   width: 100%;
@@ -27,6 +26,21 @@ body {
     width: 100%;
     height: 10rem;
   }
+}
+
+#myCarousel .carousel-caption {
+  color: white;
+  text-align: center;
+// vertical-align: middle;
+// max-width: 300px;
+// right: 0;
+// top: 1px;
+//
+// background: rgba(0,0,0,0.5);
+// opacity: 1;
+// padding: 10px;
+// height: 100%;
+left: auto; /*Added*/
 }
 
 // Styling and positioning list ul for navigation including media queries for smaller screens
