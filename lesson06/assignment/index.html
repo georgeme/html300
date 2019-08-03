@@ -1,45 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 06 - Bootstrap 4</title>
-    </head>
-    <body>
-        <main class="main">
-          <!-- Adding the navigation as an unordered list -->
-      <nav class="navigation">
-        <!-- Creating the ul to be used for the navigation. Including the figure/figcaption to use on hover on the desktop version and to show on smaller screens -->
-          <ul>
-            <li class="navigation">
-              <figure>
-                <a href="index.html"><img src="images/hollywood.jpg" alt="Image of the Hollywood sign on the hill"></a>
-                <figcaption>
-                  <a href="index.html"><h3>Home</h3></a>
-                </figcaption>
-              </figure>
-            </li>
 
-            <li class="navigation">
-              <figure>
-                <a href="index.html"><img src="images/movie.png" alt="Image of movie film"></a>
-                <figcaption>
-                  <a href="index.html"><h3>Movies</h3></a>
-                </figcaption>
-              </figure>
+<head>
+  <title>Assignment 06 - Bootstrap 4</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-              <li class="navigation">
-                <figure>
-                  <a href="index.html"><img src="images/popcorn.jpg" alt="Image of movie popcorn"></a>
-                  <figcaption>
-                    <a href="index.html"><h3>Link1</h3></a>
-                  </figcaption>
-                </figure>
-          </ul>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
 
-      </nav>
-        </main>
-    </body>
+<body>
+  <main class="main">
+    <!-- <header class="head"> -->
+    <div class="container-fluid">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <img src="images/film.jpg" alt "Image of red cinema film">
+    </div>
+
+    <div class="carousel-item">
+     <img src="images/film-reel.jpg" alt "Image of blue cinema film and reel">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/movie-theater.jpg" alt "Image of darkened movie theater">
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/clapperboard.png" alt "Image of darkened movie theater">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+    <!-- </header> -->
+
+    <!-- Adding the navigation as an unordered list -->
+    <nav class="navigation">
+      <!-- Creating the ul to be used for the navigation. Including the figure/figcaption to use on hover on the desktop version and to show on smaller screens -->
+      <ul>
+        <li class="navigation">
+          <figure>
+            <a href="index.html"><img src="images/hollywood.jpg" alt="Image of the Hollywood sign on the hill"></a>
+            <figcaption>
+              <a href="index.html">
+                <h3>Home</h3>
+              </a>
+            </figcaption>
+          </figure>
+        </li>
+
+        <li class="navigation">
+          <figure>
+            <a href="index.html"><img src="images/movie.png" alt="Image of movie film"></a>
+            <figcaption>
+              <a href="index.html">
+                <h3>Movies</h3>
+              </a>
+            </figcaption>
+          </figure>
+
+        <li class="navigation">
+          <figure>
+            <a href="index.html"><img src="images/stars.jpg" alt="Image of star constellation"></a>
+            <figcaption>
+              <a href="index.html">
+                <h3>Stars</h3>
+              </a>
+            </figcaption>
+          </figure>
+
+          <li class="navigation">
+            <figure>
+            <a href="index.html"><img src="images/popcorn.jpg" alt="Image of movie popcorn"></a>
+              <figcaption>
+                <a href="index.html">
+                  <h3>Trivia</h3>
+                </a>
+              </figcaption>
+            </figure>
+      </ul>
+
+    </nav>
+  </main>
+</body>
+<!-- test -->
 </html>

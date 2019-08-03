@@ -8,8 +8,25 @@ html {
     box-sizing: inherit;
 }
 
+body {
+  background-image: url("images/background.png");
+  background-size: cover;
+}
+
 .main {
     padding: 2rem;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 30rem;
+}
+
+@media screen and (max-width: 1225px) {
+  .carousel-inner img {
+    width: 100%;
+    height: 10rem;
+  }
 }
 
 // Styling and positioning list ul for navigation including media queries for smaller screens
@@ -20,6 +37,7 @@ ul {
   padding: 1rem;
 }
 
+
 @media screen and (max-width: 1025px) {
   ul {
     padding: 0;
@@ -29,6 +47,7 @@ ul {
 
 .navigation {
   float: left;
+  padding: 1rem;
   border-right: 3px solid #003399;
 }
 
@@ -42,7 +61,7 @@ ul {
   display: block;
   text-decoration: none;
   color: white;
-  padding: .75em .75em;
+  // padding: .75em;
 }
 
 @media screen and (max-width: 767px) {
@@ -77,6 +96,16 @@ figcaption {
   transition-property: all;
   transition-timing-function: ease;
   transition-duration: 0.6s;
+}
+
+@media screen and (max-width: 1025px) {
+  figure {
+    height: 6rem;
+    width: 12rem;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
 }
 
 // Removing the navigation transition for the media queries for smaller screens
