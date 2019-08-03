@@ -25,7 +25,7 @@ body {
   }
 }
 
-#myCarousel .carousel-caption {
+#headerCarousel .carousel-caption {
   color: white;
   left: auto;
 }
@@ -47,7 +47,7 @@ ul {
 }
 
 .navigation {
-  float: left;
+  display: inline-block;
   padding: 1rem;
   border-right: 3px solid #003399;
 }
@@ -62,7 +62,6 @@ ul {
   display: block;
   text-decoration: none;
   color: white;
-  // padding: .75em;
 }
 
 @media screen and (max-width: 767px) {
@@ -71,7 +70,7 @@ ul {
   }
 }
 
-.navigation:last-child {
+.navigation:last-of-type {
   border-right: none;
 }
 
@@ -131,4 +130,8 @@ figcaption {
 figure:hover figcaption {
   opacity: 1;
   left: 0;
+}
+
+.triviaHeader {
+  margin: 1rem;
 }
