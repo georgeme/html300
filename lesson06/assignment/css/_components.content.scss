@@ -8,8 +8,8 @@ html {
     box-sizing: inherit;
 }
 
-body {
-  background-color: #d6e0f5;
+html body {
+  background-color: #c1d0f0;
 }
 
 // Styling the carousel in the header
@@ -47,7 +47,6 @@ ul {
 }
 
 .nav {
-  background-color: blue;
   width: 100%;
   // margin-left: 1rem;
   // margin-right: 1rem;
@@ -143,10 +142,33 @@ figure:hover figcaption {
   margin: 1rem;
 }
 
+.homeHeader a {
+  color: #ff471a;
+  font-weight: 500;
+}
+
 .triviaHeader {
   margin: 1rem;
 }
 
 .starsHeader {
   margin: 1rem;
+}
+
+.moviesHeader {
+  margin: 1rem;
+}
+
+@media screen and (max-width: 1025px) {
+  h3.display-3 {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  h4.display-4 {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
 }
