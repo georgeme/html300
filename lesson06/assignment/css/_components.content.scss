@@ -8,11 +8,12 @@ html {
     box-sizing: inherit;
 }
 
+// Overriding Bootstrap body background-color
 html body {
   background-color: #c1d0f0;
 }
 
-// Styling the carousel in the header
+// Styling the carousel in the header including media query for smaller screen
 .carousel-inner img {
   width: 100%;
   height: 30rem;
@@ -21,7 +22,7 @@ html body {
 @media screen and (max-width: 1225px) {
   .carousel-inner img {
     width: 100%;
-    height: 10rem;
+    height: 15rem;
   }
 }
 
@@ -89,7 +90,7 @@ figure {
   overflow: hidden;
 }
 
-// Adding the navigation transition to overlay the figure caption on hover
+// Adding the navigation transition to overlay the figure caption on hover for desktop
 figcaption {
   position: absolute;
   background: rgba(0,0,0,0.75);
@@ -138,13 +139,9 @@ figure:hover figcaption {
   left: 0;
 }
 
+// Adding margins and some colors for various headers
 .homeHeader {
   margin: 1rem;
-}
-
-.homeHeader a {
-  color: #ff471a;
-  font-weight: 500;
 }
 
 .triviaHeader {
@@ -158,6 +155,8 @@ figure:hover figcaption {
 .moviesHeader {
   margin: 1rem;
 }
+
+// Changing font sizes for headers with "display-#" classes for smaller screens
 
 @media screen and (max-width: 1025px) {
   h3.display-3 {

@@ -371,7 +371,7 @@ html body {
 @media screen and (max-width: 1225px) {
   .carousel-inner img {
     width: 100%;
-    height: 10rem; } }
+    height: 15rem; } }
 
 #headerCarousel .carousel-caption {
   color: white;
@@ -458,10 +458,6 @@ figure:hover figcaption {
 
 .homeHeader {
   margin: 1rem; }
-
-.homeHeader a {
-  color: #ff471a;
-  font-weight: 500; }
 
 .triviaHeader {
   margin: 1rem; }

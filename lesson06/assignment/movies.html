@@ -12,14 +12,21 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- Jquery to activate the tooltips on the images -->
+  <script>$(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
 </head>
 
 <body>
   <main class="main">
-    <!-- Header start -->
+<!-- Header start (carousel) -->
     <div class="container-fluid">
       <div id="headerCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators that can be activated if desired-->
+<!-- Indicators that can be activated if desired-->
         <!-- <ol class="carousel-indicators">
           <li data-target="#headerCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#headerCarousel" data-slide-to="1"></li>
@@ -27,7 +34,7 @@
           <li data-target="#headerCarousel" data-slide-to="3"></li>
         </ol> -->
 
-        <!-- Wrapper for HEADER slides slides -->
+<!-- Wrapper for HEADER slides for carousel -->
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="carousel-caption">
@@ -59,11 +66,11 @@
         </div>
       </div>
     </div>
-    <!-- End header -->
+<!-- End header -->
 
-    <!-- Adding the navigation as an unordered list -->
+<!-- Adding the navigation as an unordered list -->
     <nav class="nav">
-      <!-- Creating the ul to be used for the navigation. Including the figure/figcaption to use on hover on the desktop version and to show on smaller screens -->
+<!-- Creating the ul to be used for the navigation. Including the figure/figcaption to use on hover on the desktop version and to show on smaller screens -->
       <ul>
         <li class="navigation">
           <figure>
@@ -107,28 +114,36 @@
           </figure>
       </ul>
     </nav>
-    <!-- End navigation -->
+<!-- End navigation -->
 
-    <!-- Start Bootstrap grid -->
+<!-- Start Bootstrap grid for images-->
     <div class="moviesHeader">
       <h3 class="display-3">find your next favorite movie!</h3>
       <h5 class="display-5">There are some movies we all know...</h5>
     </div>
-
+<!-- Movies we know images -->
     <div class="container-fluid">
       <div class="row">
         <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
-          <img src="images/007.jpg" class="rounded-circle" alt="Image of Daniel Craig as James Bond">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Daniel Craig as James Bond">
+            <img src="images/007.jpg" class="rounded-circle" alt="Image of Daniel Craig as James Bond">
+          </span>
         </div>
         <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
-          <img src="images/ironman.png" class="img-fluid" alt="Image of Ironman">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Robert Downey Jr. as Iron Man">
+            <img src="images/ironman.png" class="img-fluid" alt="Image of Iron Man">
+        </span>
         </div>
         <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
-          <img src="images/thor.jpg" class="rounded-circle" alt="Image of Thor">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Chris Hemsworth as Thor">
+            <img src="images/thor.jpg" class="rounded-circle" alt="Image of Thor">
+          </span>
         </div>
       </div>
     </div>
+<!-- End movies we know images -->
 
+<!-- Stars we know images -->
     <div class="moviesHeader">
       <h5 class="display-5">With some stars we all love...</h5>
     </div>
@@ -136,18 +151,25 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
-          <img src="images/hanks.jpg" class="rounded-circle" alt="Image of Daniel Craig as James Bond">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Tom Hanks">
+            <img src="images/hanks.jpg" class="rounded-circle" alt="Image of Tom Hanks">
+          </span>
         </div>
         <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
-          <img src="images/bogart-bacall.jpg" class="rounded-circle" alt="Image of Ironman">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Humphrey Bogart and Lauren Bacall">
+            <img src="images/bogart-bacall.jpg" class="rounded-circle" alt="Image of Humphrey Bogart and Lauren Bacall">
+          </span>
         </div>
         <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
-          <img src="images/j-law.jpg" class="rounded-circle" alt="Image of Thor">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Jennifer Lawrence">
+            <img src="images/j-law.jpg" class="rounded-circle" alt="Image of Jennifer Lawrence">
+          </span>
         </div>
       </div>
     </div>
+<!-- End stars we know images -->
 
-
+<!-- Sleeper movie list by genre -->
     <div class="moviesHeader">
       <h5 class="display-5">And then there are movies we don't remember, never knew, or forgot...</h5>
     </div>
@@ -184,9 +206,7 @@
         </div>
       </div>
     </div>
-
-
-    <!-- End Bootstrap grid -->
+<!-- End sleeper movie list-->
 
   </main>
 </body>
