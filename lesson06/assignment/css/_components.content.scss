@@ -31,113 +31,141 @@ html body {
   left: auto;
 }
 
-// Styling and positioning list ul for navigation including media queries for smaller screens
-ul {
-  list-style-type: none;
-  left: 0;
-  margin: 0;
-  padding: 1rem;
+// Additional styling to Bootstrap navigation - including a couple changes for smaller screens
+nav {
+  background-color: #000080;
 }
 
+.navbar-nav {
+  font-size: 2em;
+}
 
-@media screen and (max-width: 1025px) {
-  ul {
-    padding: 0;
-    margin-top: 3rem;
+@media screen and (max-width: 1024px) {
+  .navbar-nav {
+    font-size: 1.5em;
   }
 }
 
-.nav {
-  width: 100%;
-  // margin-left: 1rem;
-  // margin-right: 1rem;
+.nav-item {
+  padding: 2rem;
+  border-right: 1px solid #ffffff;
 }
 
-.navigation {
-  display: inline-block;
-  padding: 1rem;
-  border-right: 3px solid #003399;
+.nav-item:last-of-type {
+  border-right: none;
 }
 
 @media screen and (max-width: 767px) {
-  .navigation {
+  .nav-item {
     border: none;
   }
 }
 
-.navigation a {
-  display: block;
-  text-decoration: none;
-  color: white;
+.jumbotron {
+  margin-top: 2rem;
 }
 
-@media screen and (max-width: 767px) {
-  .navigation a {
-    padding: 0;
-  }
-}
-
-.navigation:last-of-type {
-  border-right: none;
-}
-
-// Styling the figure element for the navigation including media queries for smaller screens
-figure {
-  height: 8rem;
-  width: 15rem;
-  display: block;
-  position: relative;
-  overflow: hidden;
-}
-
-// Adding the navigation transition to overlay the figure caption on hover for desktop
-figcaption {
-  position: absolute;
-  background: rgba(0,0,0,0.75);
-  color: white;
-  margin-left: 3px;
-  padding: 10px 10px;
-  opacity: 0;
-  bottom: 0;
-  left: -30%;
-  transition-property: all;
-  transition-timing-function: ease;
-  transition-duration: 0.6s;
-}
-
-@media screen and (max-width: 1025px) {
-  figure {
-    height: 6rem;
-    width: 12rem;
-    display: block;
-    position: relative;
-    overflow: hidden;
-  }
-}
-
-// Removing the navigation transition for the media queries for smaller screens
-@media screen and (max-width: 1025px) {
-  figcaption {
-    opacity: 1;
-    background: rgba(0,0,0,1.0);
-    text-align: center;
-    left: 0;
-    transition-property: none;
-  }
-}
-
-// Changing the margin for the figcaption h3 on smaller screens
-@media screen and (max-width: 767px) {
-  figcaption h3 {
-    margin-top: 1rem;
-  }
-}
-
-// Hover affect for the figcaption (removed for smaller screens)
-figure:hover figcaption {
-  opacity: 1;
-  left: 0;
-}
+// *****COMMENTING OUT NON-BOOTSTRAP NAVBAR STYLING (THE ONE WITH IMAGES) TO KEEP THE CODE BUT NOT USE IT
+// ul {
+//   list-style-type: none;
+//   left: 0;
+//   margin: 0;
+//   padding: 1rem;
+// }
+//
+//
+// @media screen and (max-width: 1025px) {
+//   ul {
+//     padding: 0;
+//     margin-top: 3rem;
+//   }
+// }
+//
+// .nav {
+//   width: 100%;
+// }
+//
+// .navigation {
+//   display: inline-block;
+//   padding: 1rem;
+//   border-right: 3px solid #003399;
+// }
+//
+// @media screen and (max-width: 767px) {
+//   .navigation {
+//     border: none;
+//   }
+// }
+//
+// .navigation a {
+//   display: block;
+//   text-decoration: none;
+//   color: white;
+// }
+//
+// @media screen and (max-width: 767px) {
+//   .navigation a {
+//     padding: 0;
+//   }
+// }
+//
+// .navigation:last-of-type {
+//   border-right: none;
+// }
+//
+// figure {
+//   height: 8rem;
+//   width: 15rem;
+//   display: block;
+//   position: relative;
+//   overflow: hidden;
+// }
+//
+// figcaption {
+//   position: absolute;
+//   background: rgba(0,0,0,0.75);
+//   color: white;
+//   margin-left: 3px;
+//   padding: 10px 10px;
+//   opacity: 0;
+//   bottom: 0;
+//   left: -30%;
+//   transition-property: all;
+//   transition-timing-function: ease;
+//   transition-duration: 0.6s;
+// }
+//
+// @media screen and (max-width: 1025px) {
+//   figure {
+//     height: 6rem;
+//     width: 12rem;
+//     display: block;
+//     position: relative;
+//     overflow: hidden;
+//   }
+// }
+//
+// @media screen and (max-width: 1025px) {
+//   figcaption {
+//     opacity: 1;
+//     background: rgba(0,0,0,1.0);
+//     text-align: center;
+//     left: 0;
+//     transition-property: none;
+//   }
+// }
+//
+// @media screen and (max-width: 767px) {
+//   figcaption h3 {
+//     margin-top: 1rem;
+//   }
+// }
+//
+// figure:hover figcaption {
+//   opacity: 1;
+//   left: 0;
+// }
+// END NON-BOOTSTRAP NAVBAR STYLING *****
 
 // Adding margins and some colors for various headers
 .homeHeader {
