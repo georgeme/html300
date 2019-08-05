@@ -374,7 +374,7 @@ html body {
     height: 15rem; } }
 
 #headerCarousel .carousel-caption {
-  color: white;
+  color: #ffffff;
   left: auto; }
 
 nav {
@@ -404,14 +404,18 @@ nav {
 .homeHeader {
   margin: 1rem; }
 
-.triviaHeader {
-  margin: 1rem; }
-
 .starsHeader {
   margin: 1rem; }
 
 .moviesHeader {
   margin: 1rem; }
+
+.triviaHeader {
+  margin: 1rem; }
+
+.triviaHeader a {
+  color: #e65c00;
+  font-weight: 700; }
 
 @media screen and (max-width: 1025px) {
   h3.display-3 {
@@ -422,3 +426,8 @@ nav {
   h4.display-4 {
     font-size: 1.5em;
     font-weight: 600; } }
+
+footer {
+  clear: both;
+  background-color: #000080;
+  padding: 1rem; }

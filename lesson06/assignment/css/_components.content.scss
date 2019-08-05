@@ -27,7 +27,7 @@ html body {
 }
 
 #headerCarousel .carousel-caption {
-  color: white;
+  color: #ffffff;
   left: auto;
 }
 
@@ -172,16 +172,21 @@ nav {
   margin: 1rem;
 }
 
-.triviaHeader {
-  margin: 1rem;
-}
-
 .starsHeader {
   margin: 1rem;
 }
 
 .moviesHeader {
   margin: 1rem;
+}
+
+.triviaHeader {
+  margin: 1rem;
+}
+
+.triviaHeader a {
+  color: #e65c00;
+  font-weight: 700;
 }
 
 // Changing font sizes for headers with "display-#" classes for smaller screens
@@ -198,4 +203,10 @@ nav {
     font-size: 1.5em;
     font-weight: 600;
   }
+}
+
+footer {
+  clear: both;
+  background-color: #000080;
+  padding: 1rem;
 }
