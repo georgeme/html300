@@ -60,10 +60,7 @@ nav {
     border: none;
   }
 }
-
-.jumbotron {
-  margin-top: 2rem;
-}
+// End Bootstrap nav item styling
 
 // *****COMMENTING OUT NON-BOOTSTRAP NAVBAR STYLING (THE ONE WITH IMAGES) TO KEEP THE CODE BUT NOT USE IT
 // ul {
@@ -167,6 +164,11 @@ nav {
 // }
 // END NON-BOOTSTRAP NAVBAR STYLING *****
 
+// Spacing for jumbotron start
+.jumbotron {
+  margin-top: 2rem;
+}
+
 // Adding margins and some colors for various headers
 .homeHeader {
   margin: 1rem;
@@ -190,7 +192,6 @@ nav {
 }
 
 // Changing font sizes for headers with "display-#" classes for smaller screens
-
 @media screen and (max-width: 1025px) {
   h3.display-3 {
     font-size: 1.5em;
@@ -205,6 +206,7 @@ nav {
   }
 }
 
+// Footer styling
 footer {
   clear: both;
   background-color: #000080;

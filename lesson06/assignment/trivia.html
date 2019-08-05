@@ -62,20 +62,20 @@
 <!-- End header -->
 
 <!-- Bootstrap navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand" href="index.html"><img src="images/hollywood.jpg" width="150" height="60" alt="Image of the Hollywood sign on the hill"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav mr-auto">
-      <a class="nav-item nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="movies.html">Movies</a>
-      <a class="nav-item nav-link" href="stars.html">Stars</a>
-      <a class="nav-item nav-link active" href="trivia.html">Trivia</a>
-    </div>
-  </div>
-</nav>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="index.html"><img src="images/hollywood.jpg" width="150" height="60" alt="Image of the Hollywood sign on the hill"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="movies.html">Movies</a>
+              <a class="nav-item nav-link" href="stars.html">Stars</a>
+              <a class="nav-item nav-link active" href="trivia.html">Trivia</a>
+            </div>
+          </div>
+        </nav>
 <!-- End Bootstrap navbar -->
 
 <!-- *****COMMENTING OUT FANCY NAVIGATION TO REPLACE WITH BOOTSTRAP NAV BAR BUT TO KEEP THE CODE
@@ -127,10 +127,14 @@
 END OF FANCY NAVIGATION***** -->
 
 <!-- Header for trivia accordion -->
-    <div class="triviaHeader">
-      <h3 class="display-3">test your movie knowledge</h3>
-      <p class="lead">How much do you know about older or lesser known movies? Click the questions below when you're ready to see the answer.</p>
+    <div class="container d-flex align-items-center justify-content-center">
+      <div class="triviaHeader my-auto">
+        <h3 class="display-3">test your movie knowledge!</h3>
+        <p class="lead">How much do you know about older or lesser known movies? Click each question below when you're ready to see the answer.</p>
+        <img src="images/fun-movie-stuff.png" class="img-fluid rounded-circle" alt="Image of film, 3D glasses, and movie snacks">
+      </div>
     </div>
+<!-- End header for trivia accordion -->
 
 <!-- Trivia accordion start -->
     <div class="accordion" id="triviaAccordian">
@@ -226,10 +230,13 @@ END OF FANCY NAVIGATION***** -->
     </div>
 <!-- Trivia accordion end -->
 
+
+<!-- End of page content -->
     <div class="triviaHeader">
       <h3 class="display-3">how well did you do?</h3>
       <p class="lead">If you didn't do very well, you'd better watch the movies <a href="movies.html">HERE</a> and stat!</p>
     </div>
+<!-- End content -->
 
 <!-- Adding a footer to the site (may change to image later) -->
     <footer>
