@@ -12,11 +12,17 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- Jquery to activate the tooltips on the images -->
+  <script>$(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
 </head>
 
 <body>
   <main class="main">
-
 <!-- Header start (carousel) -->
     <div class="container-fluid">
       <div id="headerCarousel" class="carousel slide" data-ride="carousel">
@@ -39,16 +45,16 @@
 
           <div class="carousel-item">
             <div class="carousel-caption">
-              <h1>Movie Fun!</h1>
+              <h1 class="bg-primary p-1">Movie Fun!</h1>
             </div>
-            <img src="images/movie-theater.jpg" alt="Image of blue cinema film and reel">
+            <img src="images/film-reel.jpg" alt="Image of blue cinema film and reel">
           </div>
 
           <div class="carousel-item">
             <div class="carousel-caption">
-              <h1 class="bg-primary p-1">Movie Fun!</h1>
+              <h1>Movie Fun!</h1>
             </div>
-            <img src="images/film-reel.jpg" alt="Image of darkened movie theater">
+            <img src="images/movie-theater.jpg" alt="Image of darkened movie theater">
           </div>
 
           <div class="carousel-item">
@@ -70,8 +76,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav mr-auto">
-          <a class="nav-item nav-link active" href="index.html">Home<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="movies.html">Movies</a>
+          <a class="nav-item nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="movies.html">Movies</a>
           <a class="nav-item nav-link" href="stars.html">Stars</a>
           <a class="nav-item nav-link" href="trivia.html">Trivia</a>
         </div>
@@ -127,28 +133,97 @@
     </nav>
 END OF FANCY NAVIGATION***** -->
 
-<!-- Movies page header and image -->
+<!-- Start Bootstrap grid for images-->
     <div class="moviesHeader">
       <h3 class="display-3">find your next favorite movie!</h3>
-      <p class="lead">It's always easy to find a movie to watch. You can easily find the AFI top 100, the most popular movies of the year, or older but still popular movies.</p>
-      <p class="lead">But what about when you're tired of all the favorites and want to find something different that you never expected to watch? Well look no further!</p>
-      <p class="lead">Whether it's a sleeper hit, a movie you've never heard of, one that you didn't think would be any good, or a forgotten favorite, we've got you covered.</p>
+      <h5 class="display-5">There are some movies we all know...</h5>
     </div>
-<!-- End Movies page header -->
-
-<!-- Jumbotron for home page content -->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-          <h4 class="display-4">slē-pər mü-vē</h4>
-          <p class="lead">"Sleeper" is a term used in the entertainment industry for a film that plays successfully for a long period and becomes a big success, despite having relatively little promotion or lacking a successful opening.</p>
-          <p class="lead">Screenings for these films are held in an area conducive to the film's demographic. In the case of "Sleepless in Seattle", a romantic comedy, screenings were held at suburban shopping malls where romantic couples in their mid 20s to early 30s spent Saturday afternoons before seeing a new film. In theory, a successful screening leads to word-of-mouth marketing, as it compels viewers to discuss an interesting, low-key film with co-workers when they return to work after their weekend.</p>
-          <p class="lead">
-            <a class="btn btn-primary btn-lg" href="movies.html" role="button">Find Movies!</a>
-          </p>
-          <p class="lead">Note: not all of these movies were sleepers, but they're all great movies!</p>
+<!-- Movies we know images -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Daniel Craig as James Bond">
+            <img src="images/007.jpg" class="img-fluid rounded-circle" alt="Image of Daniel Craig as James Bond">
+          </span>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Robert Downey Jr. as Iron Man">
+            <img src="images/ironman.png" class="img-fluid" alt="Image of Iron Man">
+        </span>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Chris Hemsworth as Thor">
+            <img src="images/thor.jpg" class="img-fluid rounded-circle" alt="Image of Thor">
+          </span>
+        </div>
       </div>
     </div>
-<!-- End Jumbotron -->
+<!-- End movies we know images -->
+
+<!-- Stars we know images -->
+    <div class="moviesHeader">
+      <h5 class="display-5">With some stars we all love...</h5>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Tom Hanks">
+            <img src="images/hanks.jpg" class="img-fluid rounded-circle" alt="Image of Tom Hanks">
+          </span>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Humphrey Bogart and Lauren Bacall">
+            <img src="images/bogart-bacall.jpg" class="img-fluid rounded-circle" alt="Image of Humphrey Bogart and Lauren Bacall">
+          </span>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-sm-6 col-12 p-3">
+          <span class="d-inline-block" data-toggle="tooltip" data-placement="right" title="Jennifer Lawrence">
+            <img src="images/j-law.jpg" class="img-fluid rounded-circle" alt="Image of Jennifer Lawrence">
+          </span>
+        </div>
+      </div>
+    </div>
+<!-- End stars we know images -->
+
+<!-- Fun movie list by genre -->
+    <div class="moviesHeader">
+      <h5 class="display-5">And then there are movies we don't remember, never knew, or forgot...</h5>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
+          <h5 class="display-5">Comedy</h5>
+          <p class="lead">The Bachelor and the Bobby-Soxer</p>
+          <p class="lead">The Big Picture</p>
+          <p class="lead">Joe Versus the Volcano</p>
+          <p class="lead">Lover Come Back</p>
+          <p class="lead">My Favorite Wife</p>
+          <p class="lead">Pillow Talk</p>
+          <p class="lead">Send Me No Flowers</p>
+        </div>
+
+      <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
+        <h5 class="display-5">Romance</h5>
+        <p class="lead">The Bishop's Wife</p>
+        <p class="lead">She's Having A Baby</p>
+      </div>
+
+        <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
+          <h5 class="display-5">Musical</h5>
+          <p class="lead">Strictly Ballroom</p>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
+          <h5 class="display-5">Drama or Thriller</h5>
+          <p class="lead">His Girl Friday</p>
+          <p class="lead">Shadow of a Doubt</p>
+          <p class="lead">Tremors</p>
+        </div>
+      </div>
+    </div>
+<!-- End fun movie list-->
 
 <!-- Adding a footer to the site (may change to image later) -->
     <footer>
@@ -160,5 +235,6 @@ END OF FANCY NAVIGATION***** -->
 
   </main>
 </body>
+
 
 </html>
