@@ -55,10 +55,14 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <router-link class="navItem" to="/">Home</router-link>
+          <b-link class="navItem" to="home">Home</b-link>
+          <b-link class="navItem" to="movies">Movies</b-link>
+          <b-link class="navItem" to="stars">Stars</b-link>
+          <b-link class="navItem" to="trivia">Trivia</b-link>                              
+          <!-- <router-link class="navItem" to="/">Home</router-link>
           <router-link class="navItem" to="/movies">Movies</router-link>
           <router-link class="navItem" to="/stars">Stars</router-link>
-          <router-link class="navItem" to="/trivia">Trivia</router-link>
+          <router-link class="navItem" to="/trivia">Trivia</router-link> -->
           <!-- <b-nav-item href="/home">Home</b-nav-item>
           <b-nav-item href="/movies">Movies</b-nav-item>
           <b-nav-item href="/stars">Stars</b-nav-item>
