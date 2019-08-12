@@ -5,7 +5,9 @@ import 'bootstrap'
 import BootstrapVue from 'bootstrap-vue'
 import './main.scss'
 
+import { CarouselPlugin } from 'bootstrap-vue'
 
+Vue.use(CarouselPlugin)
 Vue.use(BootstrapVue)
 
 Vue.config.productionTip = false

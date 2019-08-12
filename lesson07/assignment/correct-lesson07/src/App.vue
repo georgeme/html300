@@ -2,44 +2,47 @@
 <div id="app">
 
   <!-- Header start (carousel) -->
-  <div class="container" id="carousel">
-    <div class="row">
-        <div class="col-12 mx-auto">
-             <!-- <template id="carousel-template"> -->
-        <div>
-            <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="1400">
-                <div class="carousel-inner">
-                    <div class="carousel-item" v-for="(banner,idx) in banners" :class="{ active: idx==0 }">
-                        <img :src="banner" alt="" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- </template> -->
-        </div>
-    </div>
-</div>
+  <div>
+    <!-- <v-carousel>
+      <v-carousel-item v-for="item in items">
+        <v-img contain :src="item"></v-img>
+      </v-carousel-item>
+    </v-carousel> -->
+
+    <!-- <v-carousel>
+      <v-carousel-item
+        v-for="(item, i) in items"
+        :key="i"
+        :src="item.src"
+      ></v-carousel-item>
+    </v-carousel> -->
+
+    <v-carousel>
+      <v-carousel-item
+        v-for="(item, i) in items"
+        :key="i"
+        :src="item"
+      >
+      </v-carousel-item>
+    </v-carousel>
+  </div>
+
   <!-- <div class="carousel">
-    <b-carousel>
-      <b-carousel-slide img-src="src/assets/film.jpg" alt="Image of red movie film">
-        <h1>Movie Fun!</h1>
-      </b-carousel-slide>
-
-      <b-carousel-slide img-src="src/assets/movie-theater.jpg" alt="Image of darkened movie theater">
-        <h1>Movie Fun!</h1>
-      </b-carousel-slide>
-
-      <b-carousel-slide img-src="src/assets/film-reel.jpg" alt="Image of blue cinema film and reel">
-        <h1>Movie Fun!</h1>
-      </b-carousel-slide>
-
-      <b-carousel-slide img-src="src/assets/clapperboard.png" alt="Image of darkened movie set clapperboard">
-        <h1>Movie Fun!</h1>
-      </b-carousel-slide>
-
-    </b-carousel>
-  </div> -->
-
+  <b-carousel>
+    <b-carousel-slide img-src="src/assets/film.jpg" alt="Image of red movie film">
+      <h1>Movie Fun!</h1>
+    </b-carousel-slide>
+    <b-carousel-slide img-src="src/assets/movie-theater.jpg" alt="Image of darkened movie theater">
+      <h1>Movie Fun!</h1>
+    </b-carousel-slide>
+    <b-carousel-slide img-src="src/assets/film-reel.jpg" alt="Image of blue cinema film and reel">
+      <h1>Movie Fun!</h1>
+    </b-carousel-slide>
+    <b-carousel-slide img-src="src/assets/clapperboard.png" alt="Image of darkened movie set clapperboard">
+      <h1>Movie Fun!</h1>
+    </b-carousel-slide>
+  </b-carousel>
+</div> -->
   <!-- End header -->
 
   <div class="navbar">
@@ -69,15 +72,55 @@
 </template>
 
 <script>
-let vm = new Vue({
-el: '#carousel',
-data () {
-  return {
-    banners:["src/assets/film.jpg","src/assets/movie-theater.jpg","src/assets/film-reel.jpg", "src/assets/clapperboard.png"]
+  let file1 = require('assets/film.jpg')
+  let file2 = require('assets/movie-theater.jpg')
+  let file3 = require('assets/film-reel.jpg')
+  let file4 = require('assets/clapperboard.png')
+
+export default {
+data() {
+  items [
+    file1,
+    file2,
+    file3,
+    file4
+  ]
+  // items: [
+  //     {
+  //       src: require('/assets/film.jpg')
+  //     },
+  //     {
+  //       src: require('/assets/movie-theater.jpg')
+  //     },
+  //     {
+  //       src: require('/assets/film-reel.jpg')
+  //     },
+  //     {
+  //       src: require('/assets/clapperboard.png')
+  //     }
+  //   ]
   }
 }
-});
+
+// export default {
+//   data() {
+//     return {
+//       slide: 0,
+//       sliding: null
+//     }
+//   },
+//   methods: {
+//     onSlideStart(slide) {
+//       this.sliding = true
+//     },
+//     onSlideEnd(slide) {
+//       this.sliding = false
+//     }
+//   }
+// }
 </script>
+
+
 
 <style>
 #app {
