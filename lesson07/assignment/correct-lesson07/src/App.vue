@@ -2,7 +2,7 @@
 <div id="app">
 
   <!-- Header start (carousel) -->
-  <div>
+  <!-- <div> -->
     <!-- <v-carousel>
       <v-carousel-item v-for="item in items">
         <v-img contain :src="item"></v-img>
@@ -17,7 +17,7 @@
       ></v-carousel-item>
     </v-carousel> -->
 
-    <v-carousel>
+    <!-- <v-carousel>
       <v-carousel-item
         v-for="(item, i) in items"
         :key="i"
@@ -25,9 +25,9 @@
       >
       </v-carousel-item>
     </v-carousel>
-  </div>
+  </div> -->
 
-  <!-- <div class="carousel">
+  <div class="carousel">
   <b-carousel>
     <b-carousel-slide img-src="src/assets/film.jpg" alt="Image of red movie film">
       <h1>Movie Fun!</h1>
@@ -42,7 +42,7 @@
       <h1>Movie Fun!</h1>
     </b-carousel-slide>
   </b-carousel>
-</div> -->
+</div>
   <!-- End header -->
 
   <div class="navbar">
@@ -67,58 +67,59 @@
       </b-collapse>
     </b-navbar>
   </div>
+
   <router-view />
 </div>
 </template>
 
-<script>
-  let file1 = require('assets/film.jpg')
-  let file2 = require('assets/movie-theater.jpg')
-  let file3 = require('assets/film-reel.jpg')
-  let file4 = require('assets/clapperboard.png')
-
-export default {
-data() {
-  items [
-    file1,
-    file2,
-    file3,
-    file4
-  ]
-  // items: [
-  //     {
-  //       src: require('/assets/film.jpg')
-  //     },
-  //     {
-  //       src: require('/assets/movie-theater.jpg')
-  //     },
-  //     {
-  //       src: require('/assets/film-reel.jpg')
-  //     },
-  //     {
-  //       src: require('/assets/clapperboard.png')
-  //     }
-  //   ]
-  }
-}
-
+// <script>
+//   let file1 = require('assets/film.jpg')
+//   let file2 = require('assets/movie-theater.jpg')
+//   let file3 = require('assets/film-reel.jpg')
+//   let file4 = require('assets/clapperboard.png')
+//
 // export default {
-//   data() {
-//     return {
-//       slide: 0,
-//       sliding: null
-//     }
-//   },
-//   methods: {
-//     onSlideStart(slide) {
-//       this.sliding = true
-//     },
-//     onSlideEnd(slide) {
-//       this.sliding = false
-//     }
+// data() {
+//   items [
+//     file1,
+//     file2,
+//     file3,
+//     file4
+//   ]
+//   // items: [
+//   //     {
+//   //       src: require('/assets/film.jpg')
+//   //     },
+//   //     {
+//   //       src: require('/assets/movie-theater.jpg')
+//   //     },
+//   //     {
+//   //       src: require('/assets/film-reel.jpg')
+//   //     },
+//   //     {
+//   //       src: require('/assets/clapperboard.png')
+//   //     }
+//   //   ]
 //   }
 // }
-</script>
+//
+// // export default {
+// //   data() {
+// //     return {
+// //       slide: 0,
+// //       sliding: null
+// //     }
+// //   },
+// //   methods: {
+// //     onSlideStart(slide) {
+// //       this.sliding = true
+// //     },
+// //     onSlideEnd(slide) {
+// //       this.sliding = false
+// //     }
+// //   }
+// // }
+// </script>
 
 
 
