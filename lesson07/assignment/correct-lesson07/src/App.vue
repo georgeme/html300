@@ -2,49 +2,35 @@
 <div id="app">
 
   <!-- Header start (carousel) -->
-  <!-- <div> -->
-    <!-- <v-carousel>
-      <v-carousel-item v-for="item in items">
-        <v-img contain :src="item"></v-img>
-      </v-carousel-item>
-    </v-carousel> -->
-
-    <!-- <v-carousel>
-      <v-carousel-item
-        v-for="(item, i) in items"
-        :key="i"
-        :src="item.src"
-      ></v-carousel-item>
-    </v-carousel> -->
-
-    <!-- <v-carousel>
-      <v-carousel-item
-        v-for="(item, i) in items"
-        :key="i"
-        :src="item"
-      >
-      </v-carousel-item>
-    </v-carousel>
-  </div> -->
-
   <div class="carousel">
-  <b-carousel>
-    <b-carousel-slide img-src="src/assets/film.jpg" alt="Image of red movie film">
-      <h1>Movie Fun!</h1>
-    </b-carousel-slide>
-    <b-carousel-slide img-src="src/assets/movie-theater.jpg" alt="Image of darkened movie theater">
-      <h1>Movie Fun!</h1>
-    </b-carousel-slide>
-    <b-carousel-slide img-src="src/assets/film-reel.jpg" alt="Image of blue cinema film and reel">
-      <h1>Movie Fun!</h1>
-    </b-carousel-slide>
-    <b-carousel-slide img-src="src/assets/clapperboard.png" alt="Image of darkened movie set clapperboard">
-      <h1>Movie Fun!</h1>
-    </b-carousel-slide>
-  </b-carousel>
-</div>
+    <b-carousel
+      id="carousel-slider"
+      style="text-shadow: 0px 0px 2px #000"
+      v-model="slide"
+      img-width="100%"
+      img-height="30rem"
+    >
+      <b-carousel-slide
+        caption="Movie Fun!"
+        img-src="@/assets/film.jpg"
+      ></b-carousel-slide>
+      <b-carousel-slide
+        caption="Movie Fun!"
+        img-src="@/assets/movie-theater.jpg"
+      ></b-carousel-slide>
+      <b-carousel-slide
+        caption="Movie Fun!"
+        img-src="@/assets/film-reel.jpg"
+      ></b-carousel-slide>
+      <b-carousel-slide
+        caption="Movie Fun!"
+        img-src="@/assets/clapperboard.png"
+      ></b-carousel-slide>
+    </b-carousel>
+  </div>
   <!-- End header -->
 
+  <!-- Navigation using routers DO NOT TOUCH THIS -IT'S THE ONLY THING THAT'S WORKING CORRECTLY -->
   <div class="navbar">
     <b-navbar toggleable="lg" type="dark">
       <b-navbar-brand href="/home">
@@ -58,74 +44,16 @@
           <b-link class="navItem" to="home">Home</b-link>
           <b-link class="navItem" to="movies">Movies</b-link>
           <b-link class="navItem" to="stars">Stars</b-link>
-          <b-link class="navItem" to="trivia">Trivia</b-link>                              
-          <!-- <router-link class="navItem" to="/">Home</router-link>
-          <router-link class="navItem" to="/movies">Movies</router-link>
-          <router-link class="navItem" to="/stars">Stars</router-link>
-          <router-link class="navItem" to="/trivia">Trivia</router-link> -->
-          <!-- <b-nav-item href="/home">Home</b-nav-item>
-          <b-nav-item href="/movies">Movies</b-nav-item>
-          <b-nav-item href="/stars">Stars</b-nav-item>
-          <b-nav-item href="/trivia">Trivia</b-nav-item> -->
+          <b-link class="navItem" to="trivia">Trivia</b-link>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
   </div>
+  <!-- End navigation -->
 
   <router-view />
 </div>
 </template>
-
-// <script>
-//   let file1 = require('assets/film.jpg')
-//   let file2 = require('assets/movie-theater.jpg')
-//   let file3 = require('assets/film-reel.jpg')
-//   let file4 = require('assets/clapperboard.png')
-//
-// export default {
-// data() {
-//   items [
-//     file1,
-//     file2,
-//     file3,
-//     file4
-//   ]
-//   // items: [
-//   //     {
-//   //       src: require('/assets/film.jpg')
-//   //     },
-//   //     {
-//   //       src: require('/assets/movie-theater.jpg')
-//   //     },
-//   //     {
-//   //       src: require('/assets/film-reel.jpg')
-//   //     },
-//   //     {
-//   //       src: require('/assets/clapperboard.png')
-//   //     }
-//   //   ]
-//   }
-// }
-//
-// // export default {
-// //   data() {
-// //     return {
-// //       slide: 0,
-// //       sliding: null
-// //     }
-// //   },
-// //   methods: {
-// //     onSlideStart(slide) {
-// //       this.sliding = true
-// //     },
-// //     onSlideEnd(slide) {
-// //       this.sliding = false
-// //     }
-// //   }
-// // }
-// </script>
-
-
 
 <style>
 #app {
