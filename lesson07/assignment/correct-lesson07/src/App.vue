@@ -3,34 +3,24 @@
 
   <!-- Header start (carousel) -->
   <div class="carousel">
-    <b-carousel
-      id="carousel-slider"
-      style="text-shadow: 0px 0px 2px #000"
-      v-model="slide"
-      img-width="100%"
-      img-height="30rem"
-    >
-      <b-carousel-slide
-        caption="Movie Fun!"
-        img-src="@/assets/film.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Movie Fun!"
-        img-src="@/assets/movie-theater.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Movie Fun!"
-        img-src="@/assets/film-reel.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Movie Fun!"
-        img-src="@/assets/clapperboard.png"
-      ></b-carousel-slide>
+    <b-carousel>
+      <b-carousel-slide img-src="@/assets/film.jpg" alt="Image of red movie film">
+        <h1>Movie Fun!</h1>
+      </b-carousel-slide>
+      <b-carousel-slide img-src="@/assets/movie-theater.jpg" alt="Image of darkened movie theater">
+        <h1>Movie Fun!</h1>
+      </b-carousel-slide>
+      <b-carousel-slide img-src="@/assets/film-reel.jpg" alt="Image of blue cinema film and reel">
+        <h1>Movie Fun!</h1>
+      </b-carousel-slide>
+      <b-carousel-slide img-src="@/assets/clapperboard.png" alt="Image of darkened movie set clapperboard">
+        <h1>Movie Fun!</h1>
+      </b-carousel-slide>
     </b-carousel>
   </div>
   <!-- End header -->
 
-  <!-- Navigation using routers DO NOT TOUCH THIS -IT'S THE ONLY THING THAT'S WORKING CORRECTLY -->
+  <!-- Navigation start (using router nav items) -->
   <div class="navbar">
     <b-navbar toggleable="lg" type="dark">
       <b-navbar-brand href="/home">
@@ -49,11 +39,17 @@
       </b-collapse>
     </b-navbar>
   </div>
-  <!-- End navigation -->
+  <!-- Navigation end -->
 
   <router-view />
 </div>
 </template>
+
+<script>
+
+</script>
+
+
 
 <style>
 #app {
@@ -63,6 +59,11 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.carousel img {
+  width: 100%;
+  height: 30rem;
 }
 
 .navbar {
