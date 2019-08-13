@@ -4,18 +4,25 @@
   <!-- Header start (carousel) -->
   <div class="carousel">
     <b-carousel>
-      <b-carousel-slide img-src="@/assets/film.jpg" alt="Image of red movie film">
-        <h1>Movie Fun!</h1>
+      <b-carousel-slide
+      v-for="item in carouselItems"
+      :key="item.id"
+      :caption="item.text"
+      :img-src="item.image"
+      class="img-fluid"
+      >
+      <!-- <img :src="image.images" class="img-fluid" :key="i" :alt="images.alt"/> -->
+        <!-- <h1>Movie Fun!</h1> -->
       </b-carousel-slide>
-      <b-carousel-slide img-src="@/assets/movie-theater.jpg" alt="Image of darkened movie theater">
+      <!-- <b-carousel-slide img-src="@/assets/movie-theater.jpg" alt="Image of darkened movie theater">
         <h1>Movie Fun!</h1>
       </b-carousel-slide>
       <b-carousel-slide img-src="@/assets/film-reel.jpg" alt="Image of blue cinema film and reel">
         <h1>Movie Fun!</h1>
       </b-carousel-slide>
-      <b-carousel-slide img-src="@/assets/clapperboard.png" alt="Image of darkened movie set clapperboard">
+      <b-carousel-slide img-src="@/assets/clapperboard.png" alt="Image of movie set clapperboard">
         <h1>Movie Fun!</h1>
-      </b-carousel-slide>
+      </b-carousel-slide> -->
     </b-carousel>
   </div>
   <!-- End header -->
@@ -46,7 +53,16 @@
 </template>
 
 <script>
-
+  data () {
+    return {
+      carouselItems: [
+        {id: 1, image: '@/assets/film.jpg', alt: 'Image of red movie film', text: 'Movie Fun!'},
+        {id: 1, image: '@/assets/movie-theater.jpg', alt: 'Image of darkened movie theater', text: 'Movie Fun!'},
+        {id: 1, image: '@/assets/film-reel.jpg', alt: 'Image of blue cinema film and reel', text: 'Movie Fun!'},
+        {id: 1, image: '@/assets/clapperboard.png', alt: 'Image ofmovie set clapperboard', text: 'Movie Fun!'}
+      ],
+    }
+  },
 </script>
 
 
