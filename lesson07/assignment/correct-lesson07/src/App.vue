@@ -4,22 +4,21 @@
   <!-- Header start (carousel) -->
   <div class="carousel">
     <b-carousel
-  id="carousel-1"
-  v-model="slide"
-  :interval="4000"
-  controls
-  indicators
-  background="#ababab"
-  style="text-shadow: 1px 1px 2px #333;"
-  @sliding-start="onSlideStart"
-  @sliding-end="onSlideEnd"
->
-<b-carousel-slide
+    id="carousel-1"
+    v-model="slide"
+    :interval="4000"
+    @sliding-start="onSlideStart"
+    @sliding-end="onSlideEnd"
+    >
+      <b-carousel-slide
         v-for="item in carouselItems"
-        :key="item.id"
-        :caption="item.text"
-        :img-src="item.image"
-      ></b-carousel-slide>
+       :key="item.id"
+       :caption="item.text"
+       :img-src="item.image"
+       class="img-fluid"
+       :alt="item.alt"
+    >
+      </b-carousel-slide>
     </b-carousel>
     <!-- <b-carousel>
       <b-carousel-slide
@@ -29,10 +28,10 @@
       :img-src="item.image"
       class="img-fluid"
       > -->
-      <!-- <img :src="image.images" class="img-fluid" :key="i" :alt="images.alt"/> -->
-        <!-- <h1>Movie Fun!</h1> -->
-      <!-- </b-carousel-slide> -->
-      <!-- <b-carousel-slide img-src="@/assets/movie-theater.jpg" alt="Image of darkened movie theater">
+    <!-- <img :src="image.images" class="img-fluid" :key="i" :alt="images.alt"/> -->
+    <!-- <h1>Movie Fun!</h1> -->
+    <!-- </b-carousel-slide> -->
+    <!-- <b-carousel-slide img-src="@/assets/movie-theater.jpg" alt="Image of darkened movie theater">
         <h1>Movie Fun!</h1>
       </b-carousel-slide>
       <b-carousel-slide img-src="@/assets/film-reel.jpg" alt="Image of blue cinema film and reel">
@@ -77,24 +76,25 @@ export default {
       carouselItems: [
         {
           id: 1,
-          image: "@/assets/film.jpg",
+          image: require('@/assets/film.jpg'),
           alt: 'Image of red movie film',
           text: 'Movie Fun!'
         },
         {
           id: 2,
-          image: '@/assets/movie-theater.jpg',
+          image: require('@/assets/movie-theater.jpg'),
           alt: 'Image of darkened movie theater',
           text: 'Movie Fun!'
         },
         {
           id: 3,
-          image: '@/assets/film-reel.jpg',
+          image: require('@/assets/film-reel.jpg'),
           alt: 'Image of blue cinema film and reel',
-          text: 'Movie Fun!'},
+          text: 'Movie Fun!'
+        },
         {
           id: 4,
-          image: '@/assets/clapperboard.png',
+          image: require('@/assets/clapperboard.png'),
           alt: 'Image ofmovie set clapperboard',
           text: 'Movie Fun!'
         }
