@@ -9,15 +9,12 @@
     </div>
   </div>
 
-  <b-card no-body class="mb-1" v-for="item in accordionItems" :key="item.id">
+  <b-card no-body class="mb-1" v-for="item in accordionItems" :key="item.accId">
     <b-card-header header-tag="header" class="p-1" role="tab">
-      <b-button
-      block href="#"
-      v-b-toggle="item.id"
-      variant="primary"> {{ item.button }}
+      <b-button block v-b-toggle="'accordion-' + accId" variant="primary"> {{ item.button }}
       </b-button>
     </b-card-header>
-    <b-collapse id="item.id" accordion="my-accordion" role="tabpanel">
+    <b-collapse id="'accordion-' + accId" accordion="my-accordion" role="tabpanel">
       <b-card-body>
         <b-card-text>{{ item.text }}</b-card-text>
       </b-card-body>
@@ -38,14 +35,44 @@ export default {
   data() {
     return {
       accordionItems: [
-      {
-        id: 'accordion-1',
-        button: `Who played Burt and Heather Gummer in Tremors?`,
-        text: `Answer: Burt: Michael Gross, Heather: Reba McEntire`
-      }
-    ],
+        {
+          accId: 1,
+          button: `Who played Burt and Heather Gummer in Tremors?`,
+          text: `Answer: Burt: Michael Gross, Heather: Reba McEntire`
+        },
+
+        {
+          accId: 2,
+          button: `In "The Bachelor and the Bobby-Soxer" (1947), what line does Dick Nugent (Cary Grant) use to convince Susan Turner (Shirley Temple) he's no more mature than boys her own age?`,
+          text: `Answer: "Mellow greetings, yookie dookie!"`
+        },
+
+        {
+          accId: 3,
+          button: `What famous character actor who's now deceased plays the studio executive Allen Habel in Kevin Bacon's "The Big Picture"?`,
+          text: `Answer: J.T. Walsh`
+        },
+
+        {
+          accId: 4,
+          button: `Also in "The Big Picture", what famous comedic actor takes an uncredited role as Kevin Bacon's agent?`,
+          text: `Answer: Martin Short`
+        },
+
+        {
+          accId: 5,
+          button: `In the movie "Joe Versus the Volcano", Meg Ryan plays three separate characters. Can you name the three characters? Which of the three does Joe end up marrying?`,
+          text: `Answer: She plays: DeDe, Angelica, and Patricia. He marries Patricia.`
+        },
+
+        {
+          accId: 6,
+          button: `In "She's Having a Baby", Jefferson (Kevin Bacon) has a fantasy about a character played by Isabel Garcia Lorca. What song is playing during that fantasy?`,
+          text: `Answer: "Haunted When the Minutes Drag" by Love and Rockets`
+        }
+      ],
+    }
   }
-}
 }
 </script>
 

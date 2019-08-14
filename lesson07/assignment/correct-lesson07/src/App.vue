@@ -51,7 +51,7 @@
 <script>
 export default {
   data() {
-    return {
+    return { 
       carouselItems: [
         {
           id: 1,
