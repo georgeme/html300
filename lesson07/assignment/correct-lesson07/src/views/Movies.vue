@@ -1,12 +1,16 @@
 <template>
   <div>
-    <h1>Movies</h1>
-    <p>Here is some information. This is the movies page</p>
+    <ImagesMovies />
   </div>
 </template>
 
 <script>
+import ImagesMovies from "@/components/ImagesMovies.vue";
+
 export default {
-  name: 'movies'
+  name: "movies",
+  components: {
+    ImagesMovies
+  }
 }
 </script>

@@ -11,10 +11,10 @@
 
   <b-card no-body class="mb-1" v-for="item in accordionItems" :key="item.accId">
     <b-card-header header-tag="header" class="p-1" role="tab">
-      <b-button block v-b-toggle="'accordion-' + accId" variant="primary"> {{ item.button }}
+      <b-button block v-b-toggle="'accordion-' + accordionItems.accId" variant="primary"> {{ item.button }}
       </b-button>
     </b-card-header>
-    <b-collapse id="'accordion-' + accId" accordion="my-accordion" role="tabpanel">
+    <b-collapse id="'accordion-' + accordionItems.accId" accordion="my-accordion" role="tabpanel">
       <b-card-body>
         <b-card-text>{{ item.text }}</b-card-text>
       </b-card-body>
@@ -33,7 +33,7 @@
 export default {
   name: "Accordion",
   data() {
-    return {
+    return { reactive: true,
       accordionItems: [
         {
           accId: 1,
@@ -77,6 +77,11 @@ export default {
 </script>
 
 <style>
+
+.triviaHeader {
+  padding: 1rem;
+  text-align: left;
+}
 @media screen and (max-width: 1025px) {
   h3.display-3 {
     font-size: 1.5em;

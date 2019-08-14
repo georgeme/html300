@@ -15,7 +15,7 @@
        :key="item.id"
        :caption="item.text"
        :img-src="item.image"
-       class="img-fluid"
+       fluid
        :alt="item.alt"
     >
       </b-carousel-slide>
@@ -51,7 +51,7 @@
 <script>
 export default {
   data() {
-    return { 
+    return {
       carouselItems: [
         {
           id: 1,
@@ -98,13 +98,13 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
   color: #2c3e50;
   margin-top: 60px;
 }
 
 html body {
-    background-color: #c2d1f0;
+    background-color: #c1d0f0;
   }
 
 .carousel img {

@@ -1,12 +1,16 @@
 <template>
   <div>
-    <h1>Stars</h1>
-    <p>Here is some information. This is the stars page</p>
+    <Card />
   </div>
 </template>
 
 <script>
+import Card from "@/components/Card.vue";
+
 export default {
-  name: 'stars'
+  name: "stars",
+  components: {
+    Card
+  }
 }
 </script>
