@@ -1,7 +1,7 @@
 <template>
 <div id="app">
 
-  <!-- Header start (carousel) -->
+<!-- Header start (carousel) -->
   <div class="carousel">
     <b-carousel
     id="carousel-1"
@@ -20,27 +20,6 @@
     >
       </b-carousel-slide>
     </b-carousel>
-    <!-- <b-carousel>
-      <b-carousel-slide
-      v-for="(item, id) in carouselItems"
-      :key="item.id"
-      :caption="item.text"
-      :img-src="item.image"
-      class="img-fluid"
-      > -->
-    <!-- <img :src="image.images" class="img-fluid" :key="i" :alt="images.alt"/> -->
-    <!-- <h1>Movie Fun!</h1> -->
-    <!-- </b-carousel-slide> -->
-    <!-- <b-carousel-slide img-src="@/assets/movie-theater.jpg" alt="Image of darkened movie theater">
-        <h1>Movie Fun!</h1>
-      </b-carousel-slide>
-      <b-carousel-slide img-src="@/assets/film-reel.jpg" alt="Image of blue cinema film and reel">
-        <h1>Movie Fun!</h1>
-      </b-carousel-slide>
-      <b-carousel-slide img-src="@/assets/clapperboard.png" alt="Image of movie set clapperboard">
-        <h1>Movie Fun!</h1>
-      </b-carousel-slide> -->
-    <!-- </b-carousel> -->
   </div>
   <!-- End header -->
 
@@ -114,8 +93,6 @@ export default {
 };
 </script>
 
-
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -126,9 +103,19 @@ export default {
   margin-top: 60px;
 }
 
+html body {
+    background-color: #c2d1f0;
+  }
+
 .carousel img {
   width: 100%;
   height: 30rem;
+}
+
+@media screen and (max-width: 769px) {
+  .carousel img {
+    height: 15rem;
+  }
 }
 
 .navbar {
