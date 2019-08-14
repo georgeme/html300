@@ -3,27 +3,14 @@
 
 <!-- Header start (carousel) -->
   <div class="carousel">
-    <b-carousel
-    id="carousel-1"
-    v-model="slide"
-    :interval="4000"
-    @sliding-start="onSlideStart"
-    @sliding-end="onSlideEnd"
-    >
-      <b-carousel-slide
-        v-for="item in carouselItems"
-       :key="item.id"
-       :caption="item.text"
-       :img-src="item.image"
-       fluid
-       :alt="item.alt"
-    >
+    <b-carousel id="carousel-1" v-model="slide" :interval="4000" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
+      <b-carousel-slide v-for="item in carouselItems" :key="item.id" :caption="item.text" :img-src="item.image" fluid :alt="item.alt">
       </b-carousel-slide>
     </b-carousel>
   </div>
-  <!-- End header -->
+<!-- End header -->
 
-  <!-- Navigation start (using router nav items) -->
+<!-- Navigation start (using router nav items) -->
   <div class="navbar">
     <b-navbar toggleable="lg" type="dark">
       <b-navbar-brand href="/home">
@@ -42,18 +29,18 @@
       </b-collapse>
     </b-navbar>
   </div>
-  <!-- Navigation end -->
+<!-- Navigation end -->
 
   <router-view />
 </div>
 </template>
 
+<!-- Images for the slider at the top of the page -->
 <script>
 export default {
   data() {
     return {
-      carouselItems: [
-        {
+      carouselItems: [{
           id: 1,
           image: require('@/assets/film.jpg'),
           alt: 'Image of red movie film',
@@ -93,6 +80,7 @@ export default {
 };
 </script>
 
+<!-- Miscellaneous styling for items in header and navigation -->
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -104,8 +92,8 @@ export default {
 }
 
 html body {
-    background-color: #c1d0f0;
-  }
+  background-color: #c1d0f0;
+}
 
 .carousel img {
   width: 100%;

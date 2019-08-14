@@ -9,6 +9,7 @@
     </div>
   </div>
 
+<!-- Cards for each star -->
   <div class="starsCards">
     <b-card class="mt-2" v-for="card in cards" :key="card.id" :header="card.name">
 
@@ -30,6 +31,7 @@
 </div>
 </template>
 
+<!-- Script to pull the data into the cards from an array -->
 <script>
 export default {
   name: "Card",
@@ -60,6 +62,7 @@ export default {
 };
 </script>
 
+<!-- Miscellaneous styling for the cards -->
 <style>
 .starsHeader {
   padding: 1rem;

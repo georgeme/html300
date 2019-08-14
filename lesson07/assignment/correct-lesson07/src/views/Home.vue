@@ -1,12 +1,16 @@
-<!-- <template>
+<template>
   <div>
-    <h1>Home</h1>
-    <p>Here is some information. This is the home page</p>
+    <Jumbotron />
   </div>
-</template> -->
+</template>
 
 <script>
+import Jumbotron from "@/components/Jumbotron.vue";
+
 export default {
-  name: 'home'
+  name: "home",
+  components: {
+    Jumbotron
+  }
 }
 </script>
