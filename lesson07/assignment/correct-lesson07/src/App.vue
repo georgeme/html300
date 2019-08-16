@@ -21,7 +21,7 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-link class="navItem" to="home">Home</b-link>
+          <b-link class="navItem" to="/">Home</b-link>
           <b-link class="navItem" to="movies">Movies</b-link>
           <b-link class="navItem" to="stars">Stars</b-link>
           <b-link class="navItem" to="trivia">Trivia</b-link>

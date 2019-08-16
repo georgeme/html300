@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
 <div role="tablist">
 
   <div class="container d-flex align-items-center justify-content-center">
@@ -11,20 +11,15 @@
 
   <b-card no-body class="mb-1" v-for="item in accordionItems" :key="item.accId">
     <b-card-header header-tag="header" class="p-1" role="tab">
-      <b-button block v-b-toggle="'accordion-' + accordionItems.accId" variant="primary"> {{ item.button }}
+      <b-button block v-b-toggle="'accordion-' + item.accId" variant="primary"> {{ item.button }}
       </b-button>
     </b-card-header>
-    <b-collapse :id="'accordion-' + accordionItems.accId" accordion="my-accordion" role="tabpanel">
+    <b-collapse :id="'accordion-' + item.accId" accordion="my-accordion" role="tabpanel">
       <b-card-body>
         <b-card-text>{{ item.text }}</b-card-text>
       </b-card-body>
     </b-collapse>
   </b-card>
-
-  <div class="triviaHeader">
-    <h3 class="display-3">how well did you do?</h3>
-    <p class="lead">If you didn't do very well, you'd better watch the movies <a href="movies.html">HERE</a> and stat!</p>
-  </div>
 
 </div>
 </template>
@@ -88,4 +83,4 @@ export default {
     font-weight: 600;
   }
 }
-</style> -->
+</style>

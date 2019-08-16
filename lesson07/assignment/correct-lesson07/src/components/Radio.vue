@@ -1,7 +1,11 @@
 <template>
 <div>
+  <div class="triviaHeader">
+    <h3 class="display-3">how well did you do?</h3>
+    <p class="lead">These weren't easy so don't worry if you didn't do very well.</p>
+  </div>
 
-  <b-form-group label="How well did you do?">
+  <b-form-group class="howWell" >
     <b-form-radio-group v-model="selected" :options="options" name="radios-success" stacked></b-form-radio-group>
     <div v-if="selected === 'nailed'">
       Sweet! But you should rewatch the movies <a href="Movies.vue">HERE</a> to be sure you really, really know them!
@@ -13,11 +17,10 @@
       Sounds like you'd better watch the movies <a href="Movies.vue">HERE</a> and stat!
     </div>
     <div v-else>
-      Choose one
+      Make your selection!
     </div>
   </b-form-group>
 
-  <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
 </div>
 </template>
 
@@ -26,8 +29,9 @@ export default {
   data() {
     return {
       selected: 'choose',
-      options: [{
-          text: 'Choose One',
+      options: [
+        {
+          text: 'Choose the option that best describes how well you did!',
           value: 'choose'
         },
         {
@@ -49,5 +53,7 @@ export default {
 </script>
 
 <style>
-
+  .howWell {
+    padding: 1rem;
+  }
 </style>

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 <div class="container-fluid">
 
   <div>
@@ -131,4 +131,4 @@ export default {
   font-size: 2rem;
   color: #007bff;
 }
-</style>
+</style> -->
