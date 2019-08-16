@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 <div role="tablist">
 
   <div class="container d-flex align-items-center justify-content-center">
@@ -14,7 +14,7 @@
       <b-button block v-b-toggle="'accordion-' + accordionItems.accId" variant="primary"> {{ item.button }}
       </b-button>
     </b-card-header>
-    <b-collapse id="'accordion-' + accordionItems.accId" accordion="my-accordion" role="tabpanel">
+    <b-collapse :id="'accordion-' + accordionItems.accId" accordion="my-accordion" role="tabpanel">
       <b-card-body>
         <b-card-text>{{ item.text }}</b-card-text>
       </b-card-body>
@@ -88,4 +88,4 @@ export default {
     font-weight: 600;
   }
 }
-</style>
+</style> -->

@@ -33,7 +33,7 @@
 
   <router-view />
 </div>
-</template>
+</template> -->
 
 <!-- Images for the slider at the top of the page -->
 <script>
@@ -131,4 +131,4 @@ html body {
     border: none;
   }
 }
-</style>
+</style> -->
