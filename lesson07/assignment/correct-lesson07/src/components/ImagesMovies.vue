@@ -9,12 +9,13 @@
       <!-- Movies we know images -->
       <div>
         <b-container>
-          <b-row>
+          <b-row align-h="around">
             <b-col>
               1 of 3
               <b-img
                 v-for="item in knowItems"
                 fluid
+                :rounded="circle"
                 :key="item.id"
                 :src="item.image"
                 :alt="item.alt"
@@ -29,7 +30,7 @@
       <!-- Stars we love images -->
       <div>
         <b-container>
-          <b-row>
+          <b-row  align-h="around">
             <b-col>
               1 of 3
               <b-img
