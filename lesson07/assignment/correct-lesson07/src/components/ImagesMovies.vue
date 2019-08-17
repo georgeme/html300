@@ -10,16 +10,9 @@
       <div>
         <b-container>
           <b-row align-h="around">
-            <b-col>
-              1 of 3
-              <b-img
-                v-for="item in knowItems"
-                fluid
-                :rounded="circle"
-                :key="item.id"
-                :src="item.image"
-                :alt="item.alt"
-              ></b-img>
+            <b-col v-for="(item, index) in knowItems">
+              {{index + 1}} of 3
+              <b-img fluid :rounded="circle" :key="item.id" :src="item.image" :alt="item.alt"></b-img>
             </b-col>
           </b-row>
         </b-container>
@@ -30,16 +23,10 @@
       <!-- Stars we love images -->
       <div>
         <b-container>
-          <b-row  align-h="around">
-            <b-col>
-              1 of 3
-              <b-img
-                v-for="item in loveItems"
-                fluid
-                :key="item.id"
-                :src="item.image"
-                :alt="item.alt"
-              ></b-img>
+          <b-row align-h="around">
+            <b-col v-for="(item, index) in loveItems">
+              {{index + 1}} of 3
+              <b-img fluid :key="item.id" :src="item.image" :alt="item.alt"></b-img>
             </b-col>
           </b-row>
         </b-container>
