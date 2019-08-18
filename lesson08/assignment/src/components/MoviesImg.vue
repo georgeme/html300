@@ -78,41 +78,47 @@
 <!-- Script to display the images from two different arrays -->
 <script>
 export default {
-  name: "ImagesMovies",
+  name: "MoviesImg",
   data() {
     return {
       knowItems: [
         {
           id: 1,
           image: require("@/assets/007.jpg"),
-          alt: "Image of Daniel Craig as James Bond"
+          alt: "Image of Daniel Craig as James Bond",
+          title: '007'
         },
         {
           id: 2,
           image: require("@/assets/ironman.png"),
-          alt: "Robert Downey Jr. as Iron Man"
+          alt: "Robert Downey Jr. as Iron Man",
+          title: 'Ironman'
         },
         {
           id: 3,
           image: require("@/assets/thor.jpg"),
-          alt: "Image of Thor"
+          alt: "Image of Thor",
+          title: 'Thor'
         }
       ],
       loveItems: [
         {
           id: 4,
           image: require("@/assets/hanks.jpg"),
-          alt: "Image of Tom Hanks"
+          alt: "Image of Tom Hanks",
+          title: 'Tom Hanks'
         },
         {
           id: 5,
           image: require("@/assets/bogart-bacall.jpg"),
-          alt: "Image of Humphrey Bogart and Lauren Bacall"
+          alt: "Image of Humphrey Bogart and Lauren Bacall",
+          title: 'Bogart and Bacall'
         },
         {
           id: 6,
           image: require("@/assets/j-law.jpg"),
-          alt: "Image of Jennifer Lawrence"
+          alt: "Image of Jennifer Lawrence",
+          title: 'Jennifer Lawrence'
         }
       ],
       comedy: [
