@@ -11,7 +11,9 @@
         <b-container>
           <b-row align-h="around">
             <b-col v-for="(item, index) in knowItems">
-              <b-img :key="item.id" :src="item.image" fluid rounded="circle" :alt="item.alt"></b-img>
+              <span v-b-tooltip.hover :title="item.alt">
+                <b-img :key="item.id" :src="item.image" fluid rounded="circle" :alt="item.alt"></b-img>
+              </span>
             </b-col>
           </b-row>
         </b-container>
@@ -25,7 +27,9 @@
         <b-container>
           <b-row align-h="around">
             <b-col v-for="(item, index) in loveItems">
-              <b-img :key="item.id" :src="item.image" fluid rounded="circle" :alt="item.alt"></b-img>
+              <span v-b-tooltip.hover :title="item.alt">
+                <b-img :key="item.id" :src="item.image" fluid rounded="circle" :alt="item.alt"></b-img>
+              </span>
             </b-col>
           </b-row>
         </b-container>
