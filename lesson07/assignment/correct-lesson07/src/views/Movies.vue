@@ -4,6 +4,7 @@
   </div>
 </template>
 
+<!-- Importing the imagesmovies component for the movies page -->
 <script>
 import ImagesMovies from "@/components/ImagesMovies.vue";
 

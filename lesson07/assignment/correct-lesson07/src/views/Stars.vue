@@ -4,6 +4,7 @@
   </div>
 </template>
 
+<!-- Importing the card component for the stars page -->
 <script>
 import Card from "@/components/Card.vue";
 

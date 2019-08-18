@@ -1,15 +1,15 @@
 <template>
 <div class="container-fluid">
 
+<!-- Header on the page -->
   <div class="moviesHeader">
     <h3 class="display-3">find your next favorite movie!</h3>
     <p class="lead">It's always easy to find a movie to watch. You can easily find the AFI top 100, the most popular movies of the year, or older but still popular movies.</p>
     <p class="lead">But what about when you're tired of all the favorites and want to find something different that you never expected to watch? Well look no further!</p>
     <p class="lead">Whether it's a sleeper hit, a movie you've never heard of, one that you didn't think would be any good, or a forgotten favorite, we've got you covered.</p>
   </div>
-  <!-- End Movies page header -->
 
-  <!-- Jumbotron for home page content -->
+<!-- Jumbotron for home page content -->
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <b-jumbotron class="jumboHeader" header="slē-pər mü-vē">
@@ -25,10 +25,8 @@
 </div>
 </template>
 
-<!-- Script to pull the data into the cards from an array -->
+<!-- No script required for this single jumbotron -->
 <script>
-
-
 </script>
 
 <!-- Miscellaneous styling for the cards -->

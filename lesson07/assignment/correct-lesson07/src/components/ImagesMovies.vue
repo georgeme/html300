@@ -1,12 +1,12 @@
 <template>
   <div class="container-fluid">
     <div>
-      <!-- Start Bootstrap grid for images -->
+<!-- Start Bootstrap grid for images -->
       <div class="moviesHeader">
         <h3 class="display-3">find your next favorite movie!</h3>
         <h5 class="display-5">There are some movies we all know...</h5>
       </div>
-      <!-- Movies we know images -->
+<!-- Movies we know images -->
       <div>
         <b-container>
           <b-row align-h="around">
@@ -20,7 +20,8 @@
       <div class="moviesHeader">
         <h5 class="display-5">With some stars we all love...</h5>
       </div>
-      <!-- Stars we love images -->
+
+<!-- Stars we love images -->
       <div>
         <b-container>
           <b-row align-h="around">
@@ -33,7 +34,7 @@
       </div>
     </div>
 
-    <!-- List of movies - hardcoded because it's not going to change -->
+<!-- List of movies - hardcoded because it's not going to change -->
     <div class="moviesHeader">
       <h5 class="display-5">And then there are movies we don't remember, never knew, or forgot...</h5>
     </div>
@@ -73,7 +74,7 @@
   </div>
 </template>
 
-<!-- Script to display the images from two arrays -->
+<!-- Script to display the images from two different arrays -->
 <script>
 export default {
   name: "ImagesMovies",
@@ -118,6 +119,7 @@ export default {
 };
 </script>
 
+<!-- Some simple styling to add color to card header and some padding -->
 <style>
 .starsHeader {
   padding: 1rem;

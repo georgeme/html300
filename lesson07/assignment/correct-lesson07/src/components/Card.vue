@@ -1,6 +1,7 @@
 <template>
 <div class="container-fluid">
 
+<!-- Creating the header for the Stars page cards -->
   <div>
     <div class="starsHeader my-auto">
       <h3 class="display-3">stars: they're just like us!</h3>
@@ -31,7 +32,7 @@
 </div>
 </template>
 
-<!-- Script to pull the data into the cards from an array -->
+<!-- Script to pull the data into the cards from an array - note: not all stars data has been ported over yet as it's a lot of data to do -->
 <script>
 export default {
   name: "Card",

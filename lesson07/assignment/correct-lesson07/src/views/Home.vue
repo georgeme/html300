@@ -4,6 +4,7 @@
   </div>
 </template>
 
+<!-- Importing the jumbotron component for the home page -->
 <script>
 import Jumbotron from "@/components/Jumbotron.vue";
 

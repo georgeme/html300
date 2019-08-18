@@ -7,6 +7,7 @@ import Trivia from '@/views/Trivia.vue'
 
 Vue.use(Router)
 
+// Adding the paths for the pages
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
