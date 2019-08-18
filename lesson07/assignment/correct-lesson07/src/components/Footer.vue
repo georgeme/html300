@@ -20,6 +20,7 @@ export default {
 }
 </script>
 
+<!-- Styling for the background and padding on the footer -->
 <style>
 footer {
   clear: both;

@@ -1,17 +1,20 @@
 <template>
   <div>
     <Card />
+    <Footer />
   </div>
 </template>
 
-<!-- Importing the card component for the stars page -->
+<!-- Importing the card and footer components for the stars page -->
 <script>
 import Card from "@/components/Card.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "stars",
   components: {
-    Card
+    Card,
+    Footer
   }
 }
 </script>

@@ -1,13 +1,13 @@
 <template>
 <div>
-<!-- Header for the radio button section -->
+  <!-- Header for the radio button section -->
   <div class="triviaHeader">
     <h3 class="display-3">how well did you do?</h3>
     <p class="lead">These weren't easy so don't worry if you didn't do very well.</p>
   </div>
 
-<!-- Creating the form with radio buttons to utilize v-if/else statements -->
-  <b-form-group class="howWell" >
+  <!-- Creating the form with radio buttons to utilize v-if/else statements -->
+  <b-form-group class="howWell">
     <b-form-radio-group v-model="selected" :options="options" name="radios-success" stacked></b-form-radio-group>
     <div v-if="selected === 'nailed'">
       Sweet! But you should rewatch the movies <a href="Movies.vue">HERE</a> to be sure you really, really know them!
@@ -32,8 +32,7 @@ export default {
   data() {
     return {
       selected: 'choose',
-      options: [
-        {
+      options: [{
           text: 'Choose the option that best describes how well you did!',
           value: 'choose'
         },
@@ -57,7 +56,7 @@ export default {
 
 <!-- Some styling to add padding -->
 <style>
-  .howWell {
-    padding: 1rem;
-  }
+.howWell {
+  padding: 1rem;
+}
 </style>

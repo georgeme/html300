@@ -2,19 +2,22 @@
   <div>
     <Accordion />
     <Radio />
+    <Footer />
   </div>
 </template>
 
-<!-- Importing both the accordion and the radio components for the trivia page -->
+<!-- Importing accordion, radio, and footer components for the trivia page -->
 <script>
 import Accordion from "@/components/Accordion.vue";
 import Radio from "@/components/Radio.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "trivia",
   components: {
     Accordion,
-    Radio
+    Radio,
+    Footer
   }
 }
 </script>
