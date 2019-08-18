@@ -11,7 +11,7 @@
         <b-container>
           <b-row align-h="around">
             <b-col v-for="(item, index) in knowItems">
-              <b-img fluid :rounded="circle" :key="item.id" :src="item.image" :alt="item.alt"></b-img>
+              <b-img :key="item.id" :src="item.image" fluid rounded="circle" :alt="item.alt"></b-img>
             </b-col>
           </b-row>
         </b-container>
@@ -25,14 +25,14 @@
         <b-container>
           <b-row align-h="around">
             <b-col v-for="(item, index) in loveItems">
-              <b-img fluid :key="item.id" :src="item.image" :alt="item.alt"></b-img>
+              <b-img :key="item.id" :src="item.image" fluid rounded="circle" :alt="item.alt"></b-img>
             </b-col>
           </b-row>
         </b-container>
       </div>
     </div>
 
-<!-- List of movies - hardcoded because it's not going to change -->
+<!-- Lists of movies using array -->
     <div class="moviesHeader">
       <h5 class="display-5">And then there are movies we don't remember, never knew, or forgot...</h5>
     </div>
@@ -41,31 +41,30 @@
       <div class="row">
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Comedy</h5>
-          <p class="lead">The Bachelor and the Bobby-Soxer</p>
-          <p class="lead">The Big Picture</p>
-          <p class="lead">Joe Versus the Volcano</p>
-          <p class="lead">Lover Come Back</p>
-          <p class="lead">My Favorite Wife</p>
-          <p class="lead">Pillow Talk</p>
-          <p class="lead">Send Me No Flowers</p>
+            <b-list-group>
+              <b-list-group-item class="movieList" v-for="(item, index) in comedy">{{ item.movie }}</b-list-group-item>
+            </b-list-group>
         </div>
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Romance</h5>
-          <p class="lead">The Bishop's Wife</p>
-          <p class="lead">She's Having A Baby</p>
+          <b-list-group>
+            <b-list-group-item class="movieList" v-for="(item, index) in romance">{{ item.movie }}</b-list-group-item>
+          </b-list-group>
         </div>
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Musical</h5>
-          <p class="lead">Strictly Ballroom</p>
+          <b-list-group>
+            <b-list-group-item class="movieList" v-for="(item, index) in musical">{{ item.movie }}</b-list-group-item>
+          </b-list-group>
         </div>
 
         <div class="col-xl-3 col-lg-3 col-sm-6 col-12 p-3">
           <h5 class="display-5">Drama or Thriller</h5>
-          <p class="lead">His Girl Friday</p>
-          <p class="lead">Shadow of a Doubt</p>
-          <p class="lead">Tremors</p>
+          <b-list-group>
+            <b-list-group-item class="movieList" v-for="(item, index) in dramaThriller">{{ item.movie }}</b-list-group-item>
+          </b-list-group>
         </div>
       </div>
     </div>
@@ -111,7 +110,67 @@ export default {
           image: require("@/assets/j-law.jpg"),
           alt: "Image of Jennifer Lawrence"
         }
-      ]
+      ],
+      comedy: [
+        {
+          id: 7,
+          movie: "The Bachelor and the Bobby Soxer"
+        },
+        {
+          id: 8,
+          movie: "The Big Picture"
+        },
+        {
+          id: 9,
+          movie: "Joe Versus the Volcano"
+        },
+        {
+          id: 10,
+          movie: "Lover Come Back"
+        },
+        {
+          id: 11,
+          movie: "My Favorite Wife"
+        },
+        {
+          id: 12,
+          movie: "Pillow Talk"
+        },
+        {
+          id: 13,
+          movie: "Send Me No Flowers"
+        }
+      ],
+      romance: [
+        {
+          id: 14,
+          movie: "The Bishop's Wife"
+        },
+        {
+          id: 15,
+          movie: "She's Having A Baby"
+        }
+      ],
+      musical: [
+        {
+          id: 16,
+          movie: "Strictly Ballroom"
+        }
+      ],
+      dramaThriller: [
+        {
+          id: 17,
+          movie: "His Girl Friday"
+        },
+        {
+          id: 18,
+          movie: "Shadow of a Doubt"
+        },
+        {
+          id: 19,
+          movie: "Tremors"
+        }
+      ],
     };
   }
 };
@@ -125,5 +184,16 @@ export default {
 
 .moviesHeader {
   padding: 1rem;
+}
+
+.movieList {
+  color: #007bff;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 1025px) {
+  .movieList {
+    font-size: 1em;
+  }
 }
 </style>
