@@ -11,7 +11,6 @@
         <b-container>
           <b-row align-h="around">
             <b-col v-for="(item, index) in knowItems">
-              {{index + 1}} of 3
               <b-img fluid :rounded="circle" :key="item.id" :src="item.image" :alt="item.alt"></b-img>
             </b-col>
           </b-row>
@@ -26,7 +25,6 @@
         <b-container>
           <b-row align-h="around">
             <b-col v-for="(item, index) in loveItems">
-              {{index + 1}} of 3
               <b-img fluid :key="item.id" :src="item.image" :alt="item.alt"></b-img>
             </b-col>
           </b-row>
@@ -121,17 +119,11 @@ export default {
 
 <!-- Some simple styling to add color to card header and some padding -->
 <style>
-.starsHeader {
-  padding: 1rem;
+.display-5 {
+  font-weight: 700;
 }
 
-.starsCards {
-  text-align: left;
+.moviesHeader {
   padding: 1rem;
-}
-
-.card-header {
-  font-size: 2rem;
-  color: #007bff;
 }
 </style>
