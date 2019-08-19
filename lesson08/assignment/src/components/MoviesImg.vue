@@ -21,13 +21,13 @@ export default {
 
 <template>
   <div>
-    <section class="imgSection" v-if="posts">
-       <post
+    <section v-if="posts">
+       <Images
         v-for="post in posts"
         v-bind:post="post"
         v-bind:key="post.id"
       >
-      </post>
+    </Images>
     </section>
   </div>
 </template>
