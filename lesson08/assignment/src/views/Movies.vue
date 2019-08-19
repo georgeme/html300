@@ -1,19 +1,19 @@
 <template>
   <div>
-    <ImagesMovies />
+    <MoviesImg />
     <Footer />
   </div>
 </template>
 
-<!-- Importing the imagesmovies and footer components for the movies page -->
+<!-- Importing the moviesimg and footer components for the movies page -->
 <script>
-import ImagesMovies from "@/components/ImagesMovies.vue";
+import MoviesImg from "@/components/MoviesImg.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
   name: "movies",
   components: {
-    ImagesMovies,
+    MoviesImg,
     Footer
   }
 }
