@@ -6,22 +6,61 @@ export default {
   components: {
     Images
   },
+
   data () {
     return {
       posts: [
-        { id: 1, author: 'Robin Rendle', title: 'A Conspiracy to Kill IE6', likes: 10, category: 'browsers', excerpt: 'Chris Zacharias published a few notes about why the team at YouTube added a banner that asked users to switch from IE6 to a more modern browser back in 2009' },
-        { id: 2, author: 'Raymond Camden', title: 'Making the Move from jQuery to Vue', likes: 15, category: 'vue', excerpt: 'As someone who has used jQuery for many. years and has recently become a Vue convert, I thought it would be an interesting topic to discuss the migration process of working with one to the other.' },
-        { id: 3, author: 'Chris Coyier', title: 'Naming things to improve accessibility', likes: 13, category: 'accessibility', excerpt: 'In modern browsers, our markup becomes an accessibility tree that ultimately informs what our interface looks like to assistive technologies. It doesn’t matter as much whether you’ve written this markup' },
-        { id: 4, author: 'Dan Englishby', title: 'The Many Ways of Getting Data Into Charts', likes: 9, category: 'apis', excerpt: 'Data is available everywhere nowadays, whether it’s in a plain text file, a REST API, an online Google sheet... you name it! It’s that variety of context that makes building graphs more than simply having a database in your local project — where there is data, there is a way.' }
+        { id: 1,
+          image: require("@/assets/007.jpg"),
+          alt: 'Image of Daniel Craig as James Bond',
+          imgTitle: 'Daniel Craig as James Bond'
+        },
+        { id: 2,
+          image: require("@/assets/ironman.png"),
+          alt: "Robert Downey Jr. as Iron Man",
+          imgTitle: 'Robert Downey Jr. as Iron Man'
+        },
+        { id: 3,
+          image: require("@/assets/thor.jpg"),
+          alt: "Image of Chris Hemsworth as Thor",
+          imgTitle: 'Chris Hemsworth as Thor'
+        },
+        {
+          id: 4,
+          image: require("@/assets/hanks.jpg"),
+          alt: "Image of Tom Hanks",
+          imgTitle: 'Tom Hanks'
+        },
+        {
+          id: 5,
+          image: require("@/assets/bogart-bacall.jpg"),
+          alt: "Image of Humphrey Bogart and Lauren Bacall",
+          imgTitle: 'Humphrey Bogart and Lauren Bacall'
+        },
+        {
+          id: 6,
+          image: require("@/assets/j-law.jpg"),
+          alt: "Image of Jennifer Lawrence",
+          imgTitle: 'Jennifer Lawrence'
+        }
       ]
     }
   }
 }
+
+
 </script>
 
 <template>
   <div>
-    <section v-if="posts">
+    <div>
+      <div class="moviesHeader">
+        <h3 class="display-3">find your next favorite movie!</h3>
+        <h5 class="display-5">There are some movies we all know... with some stars we all love...</h5>
+      </div>
+    </div>
+    <section class="d-flex flex-row" v-if="posts">
+
        <Images
         v-for="post in posts"
         v-bind:post="post"
