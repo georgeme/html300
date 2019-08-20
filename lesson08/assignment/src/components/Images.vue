@@ -2,6 +2,12 @@
 export default {
   name: 'Images',
   props: ['post'],
+
+filters: {
+  uppercase(value) {
+    return value.toUpperCase();
+    }
+  }
 }
 
 </script>

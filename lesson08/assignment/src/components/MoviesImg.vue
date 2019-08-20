@@ -21,13 +21,6 @@ export default {
     }
   },
 
-  filters: {
-    uppercase(value) {
-    return value.toUpperCase();
-    }
-  },
-
-
 // Image data
   data () {
     return {

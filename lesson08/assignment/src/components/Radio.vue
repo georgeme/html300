@@ -31,12 +31,12 @@
 export default {
   data() {
     return {
-      selected: 'choose',
+      // selected: 'choose',
       options: [{
-          text: 'Choose the option that best describes how well you did!',
-          value: 'choose'
-        },
-        {
+        //   text: 'Choose the option that best describes how well you did!',
+        //   value: 'choose'
+        // },
+        
           text: 'Nailed it!',
           value: 'nailed'
         },
