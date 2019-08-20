@@ -1,12 +1,34 @@
 <script>
 import Images from '@/components/Images.vue';
+import SlotsHeader from '@/components/SlotsHeader.vue';
 
 export default {
   name: 'MoviesImg',
   components: {
-    Images
+    Images,
+    SlotsHeader
   },
 
+// Prop validation for id and alt text
+  Images: {
+    id: {
+      type: Number,
+      required: true
+    },
+    alt: {
+      type: String,
+      required: true
+    }
+  },
+
+  filters: {
+    myFilter(value) {
+    return value.toUpperCase();
+    }
+  },
+
+
+// Image data
   data () {
     return {
       posts: [
@@ -47,26 +69,26 @@ export default {
     }
   }
 }
-
-
 </script>
 
 <template>
   <div>
+<!-- Header for the page -->
     <div>
       <div class="moviesHeader">
-        <h3 class="display-3">find your next favorite movie!</h3>
-        <h5 class="display-5">There are some movies we all know... with some stars we all love...</h5>
+      <slots-header>
+        <h3 class="display-3" slot="header">find your next favorite movie!</h3>
+        <h5 class="display-5" slot="subHeader">There are some movies we all know... with some stars we all love...</h5>
+      </slots-header>
       </div>
     </div>
-    <section class="d-flex flex-row" v-if="posts">
-
-       <Images
+      <section class="d-flex flex-row" v-if="posts">
+        <Images
         v-for="post in posts"
         v-bind:post="post"
         v-bind:key="post.id"
-      >
-    </Images>
-    </section>
+        >
+        </Images>
+      </section>
   </div>
 </template>
