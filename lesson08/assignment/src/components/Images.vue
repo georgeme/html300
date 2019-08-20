@@ -3,6 +3,7 @@ export default {
   name: 'Images',
   props: ['post'],
 }
+
 </script>
 
 <template>
@@ -14,8 +15,10 @@ export default {
 
       <!-- <b-row align-h="around">
         <b-col> -->
-          <h6 class="display-6 post__imgTitle">{{ post.imgTitle | myFilter }}</h6>
-          <b-img :src="post.image" fluid rounded="circle" :alt="post.alt"></b-img>
+          <h6 class="display-6 post__imgTitle">{{ post.imgTitle | uppercase }}</h6>
+            <span v-b-tooltip.hover :title="post.imgTitle">
+              <b-img :src="post.image" fluid rounded="circle" :alt="post.alt"></b-img>
+            </span>
         <!-- </b-col>
       </b-row> -->
 

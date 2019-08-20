@@ -1,12 +1,12 @@
 <template>
   <div class="container-fluid">
-    <div>
-<!-- Start Bootstrap grid for images -->
+    <!-- <div>
+Start Bootstrap grid for images
       <div class="moviesHeader">
         <h3 class="display-3">find your next favorite movie!</h3>
         <h5 class="display-5">There are some movies we all know...</h5>
       </div>
-<!-- Movies we know images -->
+Movies we know images
       <div>
         <b-container>
           <b-row align-h="around">
@@ -22,7 +22,7 @@
         <h5 class="display-5">With some stars we all love...</h5>
       </div>
 
-<!-- Stars we love images -->
+Stars we love images
       <div>
         <b-container>
           <b-row align-h="around">
@@ -34,7 +34,7 @@
           </b-row>
         </b-container>
       </div>
-    </div>
+    </div> -->
 
 <!-- Lists of movies using array -->
     <div class="moviesHeader">
@@ -81,40 +81,40 @@ export default {
   name: "ImagesMovies",
   data() {
     return {
-      knowItems: [
-        {
-          id: 1,
-          image: require("@/assets/007.jpg"),
-          alt: "Image of Daniel Craig as James Bond"
-        },
-        {
-          id: 2,
-          image: require("@/assets/ironman.png"),
-          alt: "Robert Downey Jr. as Iron Man"
-        },
-        {
-          id: 3,
-          image: require("@/assets/thor.jpg"),
-          alt: "Image of Thor"
-        }
-      ],
-      loveItems: [
-        {
-          id: 4,
-          image: require("@/assets/hanks.jpg"),
-          alt: "Image of Tom Hanks"
-        },
-        {
-          id: 5,
-          image: require("@/assets/bogart-bacall.jpg"),
-          alt: "Image of Humphrey Bogart and Lauren Bacall"
-        },
-        {
-          id: 6,
-          image: require("@/assets/j-law.jpg"),
-          alt: "Image of Jennifer Lawrence"
-        }
-      ],
+      // knowItems: [
+      //   {
+      //     id: 1,
+      //     image: require("@/assets/007.jpg"),
+      //     alt: "Image of Daniel Craig as James Bond"
+      //   },
+      //   {
+      //     id: 2,
+      //     image: require("@/assets/ironman.png"),
+      //     alt: "Robert Downey Jr. as Iron Man"
+      //   },
+      //   {
+      //     id: 3,
+      //     image: require("@/assets/thor.jpg"),
+      //     alt: "Image of Thor"
+      //   }
+      // ],
+      // loveItems: [
+      //   {
+      //     id: 4,
+      //     image: require("@/assets/hanks.jpg"),
+      //     alt: "Image of Tom Hanks"
+      //   },
+      //   {
+      //     id: 5,
+      //     image: require("@/assets/bogart-bacall.jpg"),
+      //     alt: "Image of Humphrey Bogart and Lauren Bacall"
+      //   },
+      //   {
+      //     id: 6,
+      //     image: require("@/assets/j-law.jpg"),
+      //     alt: "Image of Jennifer Lawrence"
+      //   }
+      // ],
       comedy: [
         {
           id: 7,

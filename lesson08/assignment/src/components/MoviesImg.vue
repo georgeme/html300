@@ -22,7 +22,7 @@ export default {
   },
 
   filters: {
-    myFilter(value) {
+    uppercase(value) {
     return value.toUpperCase();
     }
   },
