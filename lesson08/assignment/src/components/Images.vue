@@ -18,7 +18,7 @@ export default {
 
 <template>
 <div>
-
+<!-- Creating the article for the images, changing the text for the image title to uppercase, adding border on click to images -->
   <!-- <b-container fluid> -->
   <article class="post">
     <!-- <b-row align-h="around">

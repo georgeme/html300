@@ -66,7 +66,7 @@ export default {
 
 <template>
   <div>
-<!-- Header for the page -->
+<!-- Header for the page using named slot -->
     <div>
       <div class="moviesHeader">
       <slots-header>

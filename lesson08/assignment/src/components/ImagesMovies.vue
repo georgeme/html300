@@ -1,5 +1,6 @@
 <template>
   <div class="container-fluid">
+<!-- Commenting out the code for the images since it was moved to another component. Keeping for reference to code later -->
     <!-- <div>
 Start Bootstrap grid for images
       <div class="moviesHeader">
