@@ -1,3 +1,25 @@
+<template>
+  <div>
+<!-- Header for the page using named slot -->
+    <div>
+      <div class="moviesHeader">
+      <slots-header>
+        <h3 class="display-3" slot="header">find your next favorite movie!</h3>
+        <h5 class="display-5" slot="subHeader">There are some movies we all know... with some stars we all love...</h5>
+      </slots-header>
+      </div>
+    </div>
+      <section class="d-flex flex-row-wrap" v-if="posts">
+        <Images
+        v-for="post in posts"
+        v-bind:post="post"
+        v-bind:key="post.id"
+        >
+        </Images>
+      </section>
+  </div>
+</template>
+
 <script>
 import Images from '@/components/Images.vue';
 import SlotsHeader from '@/components/SlotsHeader.vue';
@@ -63,25 +85,3 @@ export default {
   }
 }
 </script>
-
-<template>
-  <div>
-<!-- Header for the page using named slot -->
-    <div>
-      <div class="moviesHeader">
-      <slots-header>
-        <h3 class="display-3" slot="header">find your next favorite movie!</h3>
-        <h5 class="display-5" slot="subHeader">There are some movies we all know... with some stars we all love...</h5>
-      </slots-header>
-      </div>
-    </div>
-      <section class="d-flex flex-row" v-if="posts">
-        <Images
-        v-for="post in posts"
-        v-bind:post="post"
-        v-bind:key="post.id"
-        >
-        </Images>
-      </section>
-  </div>
-</template>
