@@ -3,10 +3,8 @@
 <!-- Header for the page using named slot -->
     <div>
       <div class="moviesHeader">
-      <slots-header>
-        <h3 class="display-3" slot="header">find your next favorite movie!</h3>
-        <h5 class="display-5" slot="subHeader">There are some movies we all know... with some stars we all love...</h5>
-      </slots-header>
+        <slots-header>
+        </slots-header>
       </div>
     </div>
       <section class="movies d-flex flex-row" v-if="posts">
