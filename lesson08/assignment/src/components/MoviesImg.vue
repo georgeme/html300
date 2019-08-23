@@ -9,7 +9,7 @@
       </slots-header>
       </div>
     </div>
-      <section class="d-flex flex-row-wrap" v-if="posts">
+      <section class="movies d-flex flex-row" v-if="posts">
         <Images
         v-for="post in posts"
         v-bind:post="post"
@@ -85,3 +85,11 @@ export default {
   }
 }
 </script>
+
+<style>
+
+.movies {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+</style>
