@@ -1,42 +1,5 @@
 <template>
   <div class="container-fluid">
-<!-- Commenting out the code for the images since it was moved to another component. Keeping for reference to code later -->
-    <!-- <div>
-Start Bootstrap grid for images
-      <div class="moviesHeader">
-        <h3 class="display-3">find your next favorite movie!</h3>
-        <h5 class="display-5">There are some movies we all know...</h5>
-      </div>
-Movies we know images
-      <div>
-        <b-container>
-          <b-row align-h="around">
-            <b-col v-for="(item, index) in knowItems">
-              <span v-b-tooltip.hover :title="item.alt">
-                <b-img :key="item.id" :src="item.image" fluid rounded="circle" :alt="item.alt"></b-img>
-              </span>
-            </b-col>
-          </b-row>
-        </b-container>
-      </div>
-      <div class="moviesHeader">
-        <h5 class="display-5">With some stars we all love...</h5>
-      </div>
-
-Stars we love images
-      <div>
-        <b-container>
-          <b-row align-h="around">
-            <b-col v-for="(item, index) in loveItems">
-              <span v-b-tooltip.hover :title="item.alt">
-                <b-img :key="item.id" :src="item.image" fluid rounded="circle" :alt="item.alt"></b-img>
-              </span>
-            </b-col>
-          </b-row>
-        </b-container>
-      </div>
-    </div> -->
-
 <!-- Lists of movies using array -->
     <div class="moviesHeader">
       <h5 class="display-5">And then there are movies we don't remember, never knew, or forgot...</h5>

@@ -7,7 +7,7 @@
         </slots-header>
       </div>
     </div>
-      <section class="movies d-flex flex-row" v-if="posts">
+      <section id="imgBorder" class="movies d-flex flex-row" v-if="posts">
         <Images
         v-for="post in posts"
         v-bind:post="post"
@@ -40,6 +40,7 @@ export default {
       required: true
     }
   },
+
 
 // Image data
   data () {
@@ -80,8 +81,9 @@ export default {
         }
       ]
     }
-  }
-}
+  },
+};
+
 </script>
 
 <style>
@@ -89,5 +91,13 @@ export default {
 .movies {
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.border {
+  border: 2px solid red;
+}
+
+.noBorder {
+  border: none;
 }
 </style>

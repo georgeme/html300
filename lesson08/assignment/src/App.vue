@@ -120,6 +120,10 @@ html body {
   border-right: none;
 }
 
+.router-link-exact-active {
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1024px) {
   .navItem {
     font-size: 1.5em;

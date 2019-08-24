@@ -7,7 +7,7 @@
         <b-col> -->
     <h6 class="display-6 post__imgTitle">{{ post.imgTitle | uppercase }}</h6>
     <span v-b-tooltip.hover :title="post.imgTitle">
-      <b-img id="imageBorder" :src="post.image" @click="clicked(this)" fluid rounded="circle" :alt="post.alt"></b-img>
+    <b-img id="imageBorder" :src="post.image" @click="clicked()" v-bind:class="{ border: true }" fluid rounded="circle" :alt="post.alt"></b-img>
     </span>
     <!-- </b-col>
       </b-row> -->
@@ -31,7 +31,11 @@ export default {
     }
   },
 
-
+data () {
+  return {
+    border: false,
+    }
+  }
 }
 </script>
 
