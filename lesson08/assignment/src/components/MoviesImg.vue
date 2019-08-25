@@ -92,12 +92,4 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
 }
-
-.border {
-  border: 2px solid red;
-}
-
-.noBorder {
-  border: none;
-}
 </style>
