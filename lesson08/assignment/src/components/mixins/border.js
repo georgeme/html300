@@ -1,12 +1,12 @@
 export const toggle = {
-  data () {
+  data() {
     return {
       isShowing: false
     }
   },
 
   methods: {
-    toggleshow() {
+    toggleShow() {
       this.isShowing = !this.isShowing;
     }
   }
