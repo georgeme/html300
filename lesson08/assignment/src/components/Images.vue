@@ -7,7 +7,7 @@
         <b-col> -->
     <h6 class="display-6 post__imgTitle">{{ post.imgTitle | uppercase }}</h6>
     <span v-b-tooltip.hover :title="post.imgTitle">
-    <b-img id="imageBorder" :src="post.image" @click="clicked()" v-bind:class="border" fluid rounded="circle" :alt="post.alt"></b-img>
+    <b-img :src="post.image" @click="toggleShow" fluid rounded="circle" :alt="post.alt"></b-img>
     </span>
     <!-- </b-col>
       </b-row> -->
@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import ImgBorder from '@/components/mixins/ImgBorder.vue';
+import { toggle } from '@/components/mixins/border.js';
 
 export default {
   name: 'Images',
   props: ['post'],
-  mixins: [ImgBorder],
+  mixins: [toggle],
 
   filters: {
     uppercase(value) {
@@ -31,12 +31,12 @@ export default {
     }
   },
 
-data () {
-  return {
-    border: false,
-    }
+  data() {
+    return {
+      isShowing: true
+    };
   }
-}
+};
 </script>
 
 <style>
