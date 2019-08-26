@@ -19,6 +19,7 @@
 </template>
 
 <script>
+// Importing the components for the images and named slot
 import Images from '@/components/Images.vue';
 import SlotsHeader from '@/components/SlotsHeader.vue';
 
@@ -29,7 +30,7 @@ export default {
     SlotsHeader
   },
 
-// Prop validation for id and alt text
+// Prop validation for image id and alt text
   Images: {
     id: {
       type: Number,
@@ -40,7 +41,6 @@ export default {
       required: true
     }
   },
-
 
 // Image data
   data () {
@@ -87,7 +87,7 @@ export default {
 </script>
 
 <style>
-
+/* Styling to use flex wrap for images on page */
 .movies {
   flex-wrap: wrap;
   justify-content: center;

@@ -39,46 +39,12 @@
   </div>
 </template>
 
-<!-- Script to display the images from two different arrays -->
+<!-- Displaying the list of movies by category -->
 <script>
 export default {
   name: "ImagesMovies",
   data() {
     return {
-      // knowItems: [
-      //   {
-      //     id: 1,
-      //     image: require("@/assets/007.jpg"),
-      //     alt: "Image of Daniel Craig as James Bond"
-      //   },
-      //   {
-      //     id: 2,
-      //     image: require("@/assets/ironman.png"),
-      //     alt: "Robert Downey Jr. as Iron Man"
-      //   },
-      //   {
-      //     id: 3,
-      //     image: require("@/assets/thor.jpg"),
-      //     alt: "Image of Thor"
-      //   }
-      // ],
-      // loveItems: [
-      //   {
-      //     id: 4,
-      //     image: require("@/assets/hanks.jpg"),
-      //     alt: "Image of Tom Hanks"
-      //   },
-      //   {
-      //     id: 5,
-      //     image: require("@/assets/bogart-bacall.jpg"),
-      //     alt: "Image of Humphrey Bogart and Lauren Bacall"
-      //   },
-      //   {
-      //     id: 6,
-      //     image: require("@/assets/j-law.jpg"),
-      //     alt: "Image of Jennifer Lawrence"
-      //   }
-      // ],
       comedy: [
         {
           id: 7,
@@ -144,7 +110,7 @@ export default {
 };
 </script>
 
-<!-- Some simple styling to add color to card header and some padding -->
+<!-- Some simple styling to add color to header and some padding -->
 <style>
 .display-5 {
   font-weight: 700;

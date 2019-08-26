@@ -1,3 +1,4 @@
+<!-- Creating the named slots for Movies page headers with default content -->
 <template>
     <div>
         <slot name="header"><h3 class="display-3" slot="header">find your next favorite movie!</h3></slot>
